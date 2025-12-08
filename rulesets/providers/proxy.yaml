@@ -1,0 +1,60 @@
+# Rule Provider - 代理规则集
+# 适用于 Clash Premium 及以上版本
+# 更新日期: 2025-12-08
+
+payload:
+  # 常用国际网站
+  - DOMAIN-SUFFIX,google.com
+  - DOMAIN-SUFFIX,googleapis.com
+  - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-SUFFIX,youtube.com
+  - DOMAIN-SUFFIX,ytimg.com
+  - DOMAIN-SUFFIX,facebook.com
+  - DOMAIN-SUFFIX,fbcdn.net
+  - DOMAIN-SUFFIX,twitter.com
+  - DOMAIN-SUFFIX,twimg.com
+  - DOMAIN-SUFFIX,instagram.com
+  - DOMAIN-SUFFIX,reddit.com
+  - DOMAIN-SUFFIX,redd.it
+
+  # AI 工具
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,perplexity.ai
+  - DOMAIN-KEYWORD,gemini
+
+  # 开发工具
+  - DOMAIN-SUFFIX,github.com
+  - DOMAIN-SUFFIX,githubusercontent.com
+  - DOMAIN-SUFFIX,github.io
+  - DOMAIN-SUFFIX,githubassets.com
+  - DOMAIN-SUFFIX,npmjs.org
+  - DOMAIN-SUFFIX,npmjs.com
+  - DOMAIN-SUFFIX,pypi.org
+  - DOMAIN-SUFFIX,docker.com
+  - DOMAIN-SUFFIX,docker.io
+
+  # 流媒体
+  - DOMAIN-SUFFIX,netflix.com
+  - DOMAIN-SUFFIX,nflxvideo.net
+  - DOMAIN-SUFFIX,disneyplus.com
+  - DOMAIN-SUFFIX,hulu.com
+  - DOMAIN-SUFFIX,spotify.com
+  - DOMAIN-SUFFIX,scdn.co
+
+  # 学术资源
+  - DOMAIN-SUFFIX,arxiv.org
+  - DOMAIN-SUFFIX,scholar.google.com
+  - DOMAIN-SUFFIX,researchgate.net
+  - DOMAIN-SUFFIX,semanticscholar.org
+  - DOMAIN-SUFFIX,sci-hub.se
+
+  # Wikipedia
+  - DOMAIN-SUFFIX,wikipedia.org
+  - DOMAIN-SUFFIX,wikimedia.org
+
+  # 在此添加更多规则
+  # - DOMAIN-SUFFIX,example.com
+  # - DOMAIN-KEYWORD,keyword

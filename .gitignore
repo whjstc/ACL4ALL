@@ -1,0 +1,104 @@
+# === 敏感信息（重要！不要提交！）===
+# 机场订阅链接
+subscription.txt
+subscription.yaml
+sub.txt
+*.subscription
+
+# 包含节点信息的完整配置
+config-with-nodes.yaml
+config-with-proxies.yaml
+nodes.yaml
+proxies.yaml
+
+# 自定义节点配置（包含真实 IP、用户名、密码）
+profiles/custom-nodes.yaml
+custom-nodes.yaml
+
+# 包含 Token 或密钥的文件
+*.token
+*.secret
+*.key
+*-secret.*
+*-token.*
+
+# === 操作系统 ===
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.directory
+
+# === 编辑器 ===
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# === 备份文件 ===
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
+
+# === 日志文件 ===
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === 临时文件 ===
+temp/
+tmp/
+cache/
+.cache/
+
+# === 测试输出 ===
+test-output/
+coverage/
+
+# === Node.js ===
+node_modules/
+package-lock.json
+yarn.lock
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+ENV/
+
+# === 个人笔记 ===
+notes.md
+TODO.md
+私人笔记.md

@@ -1,0 +1,50 @@
+# 自定义代理规则
+# 格式: DOMAIN-SUFFIX,域名
+# 更新日期: 2025-12-08
+
+# 常用国际网站
+DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,twitter.com
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,reddit.com
+
+# AI 工具
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,gemini.google.com
+
+# 开发工具
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,npmjs.org
+DOMAIN-SUFFIX,npmjs.com
+DOMAIN-SUFFIX,pypi.org
+DOMAIN-SUFFIX,docker.com
+DOMAIN-SUFFIX,hub.docker.com
+
+# 流媒体
+DOMAIN-SUFFIX,netflix.com
+DOMAIN-SUFFIX,disneyplus.com
+DOMAIN-SUFFIX,hulu.com
+DOMAIN-SUFFIX,spotify.com
+
+# 新闻媒体
+DOMAIN-SUFFIX,nytimes.com
+DOMAIN-SUFFIX,wsj.com
+DOMAIN-SUFFIX,bbc.com
+DOMAIN-SUFFIX,reuters.com
+
+# 学术资源
+DOMAIN-SUFFIX,arxiv.org
+DOMAIN-SUFFIX,scholar.google.com
+DOMAIN-SUFFIX,researchgate.net
+DOMAIN-SUFFIX,semanticscholar.org
+
+# 自定义代理域名（在下方添加你的规则）
+# DOMAIN-SUFFIX,example.com
+# DOMAIN-KEYWORD,keyword

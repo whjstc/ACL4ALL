@@ -1,0 +1,78 @@
+# 自定义节点配置模板
+# ⚠️ 本文件仅为模板，不要提交真实的节点信息到公开仓库！
+
+# 使用方法：
+# 1. 复制本文件为 custom-nodes.yaml
+#    cp custom-nodes.yaml.example custom-nodes.yaml
+# 2. 编辑 custom-nodes.yaml，填入真实信息
+# 3. custom-nodes.yaml 已在 .gitignore 中，不会被提交
+
+proxies:
+  # ===== Socks5 代理示例 =====
+  - name: "Cliproxy-美国ISP"
+    type: socks5
+    server: your-residential-ip.example.com  # 替换为你的住宅 IP 或域名
+    port: 443                                 # 替换为实际端口
+    username: your-username                   # 替换为实际用户名
+    password: your-password                   # 替换为实际密码
+    udp: true                                 # 是否支持 UDP
+    # tls: false                              # 是否使用 TLS（可选）
+    # skip-cert-verify: false                 # 是否跳过证书验证（可选）
+
+  # ===== HTTP 代理示例 =====
+  # - name: "HTTP-Proxy"
+  #   type: http
+  #   server: proxy.example.com
+  #   port: 8080
+  #   username: your-username
+  #   password: your-password
+  #   # tls: true
+  #   # skip-cert-verify: false
+
+  # ===== Shadowsocks 示例 =====
+  # - name: "SS-Node"
+  #   type: ss
+  #   server: ss.example.com
+  #   port: 8388
+  #   cipher: aes-256-gcm
+  #   password: your-password
+  #   udp: true
+
+  # ===== VMess 示例 =====
+  # - name: "VMess-Node"
+  #   type: vmess
+  #   server: vmess.example.com
+  #   port: 443
+  #   uuid: your-uuid-here
+  #   alterId: 0
+  #   cipher: auto
+  #   tls: true
+  #   network: ws
+  #   ws-opts:
+  #     path: /path
+  #     headers:
+  #       Host: vmess.example.com
+
+  # ===== 多个节点示例 =====
+  # 如果你有多个住宅 IP 或代理，可以继续添加：
+  # - name: "Cliproxy-日本ISP"
+  #   type: socks5
+  #   server: jp-residential.example.com
+  #   port: 443
+  #   username: your-username
+  #   password: your-password
+  #   udp: true
+  #
+  # - name: "Cliproxy-英国ISP"
+  #   type: socks5
+  #   server: uk-residential.example.com
+  #   port: 443
+  #   username: your-username
+  #   password: your-password
+  #   udp: true
+
+# ===== 重要提示 =====
+# 1. 节点名称必须包含「Cliproxy」关键词，才能被 advanced.ini 的链式代理正则匹配
+# 2. 如果要修改节点名称，同步修改 subconverter/advanced.ini 中的正则表达式
+# 3. 不要在公开场合分享包含真实信息的配置文件
+# 4. 定期更换密码，增强安全性

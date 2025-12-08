@@ -1,0 +1,213 @@
+# Clash 配置示例
+# 本文件仅作为参考，实际使用请通过 Subconverter 生成包含节点的完整配置
+# 更新日期: 2025-12-08
+
+# 混合端口（HTTP + SOCKS5）
+mixed-port: 7890
+
+# HTTP 代理端口
+# port: 7890
+
+# SOCKS5 代理端口
+# socks-port: 7891
+
+# Linux 和 macOS 的 redir 代理端口
+# redir-port: 7892
+
+# 允许局域网连接
+allow-lan: true
+
+# 绑定地址（"*" 表示所有地址）
+bind-address: "*"
+
+# Clash 运行模式
+# - Rule: 规则模式（推荐）
+# - Global: 全局模式
+# - Direct: 直连模式
+mode: Rule
+
+# 日志级别
+# - info: 信息
+# - warning: 警告
+# - error: 错误
+# - debug: 调试
+# - silent: 静默
+log-level: info
+
+# IPv6 支持
+ipv6: true
+
+# 外部控制器（用于 Clash Dashboard）
+external-controller: 127.0.0.1:9090
+
+# 外部控制器密钥（可选，增强安全性）
+# secret: "your-secret-key"
+
+# 实验性功能
+experimental:
+  ignore-resolve-fail: true
+
+# DNS 配置
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+
+  # 默认 DNS 服务器
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+
+  # 上游 DNS 服务器
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+
+  # 回退 DNS 服务器（国外）
+  fallback:
+    - https://1.1.1.1/dns-query
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+
+  # 回退过滤
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+
+# 代理节点（此处为示例，实际使用请填入你的节点信息）
+proxies:
+  # Shadowsocks 示例
+  - name: "示例-香港节点"
+    type: ss
+    server: server.example.com
+    port: 8388
+    cipher: aes-256-gcm
+    password: "your-password"
+    udp: true
+
+  # VMess 示例
+  - name: "示例-美国节点"
+    type: vmess
+    server: server.example.com
+    port: 443
+    uuid: your-uuid-here
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /path
+      headers:
+        Host: server.example.com
+
+# 代理组
+proxy-groups:
+  # 主选择器
+  - name: "🚀 节点选择"
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - DIRECT
+
+  # 自动选择最低延迟
+  - name: "♻️ 自动选择"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 示例-香港节点
+      - 示例-美国节点
+
+  # 香港节点组
+  - name: "🇭🇰 香港节点"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 示例-香港节点
+
+  # 美国节点组
+  - name: "🇺🇸 美国节点"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 示例-美国节点
+
+  # 流媒体
+  - name: "🎥 流媒体"
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+
+  # Telegram
+  - name: "📲 电报消息"
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🇭🇰 香港节点
+
+  # 全球直连
+  - name: "🎯 全球直连"
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+
+  # 广告拦截
+  - name: "🛑 广告拦截"
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  # 漏网之鱼
+  - name: "🐟 漏网之鱼"
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+
+# 规则
+rules:
+  # 局域网直连
+  - DOMAIN-SUFFIX,local,🎯 全球直连
+  - IP-CIDR,127.0.0.0/8,🎯 全球直连
+  - IP-CIDR,172.16.0.0/12,🎯 全球直连
+  - IP-CIDR,192.168.0.0/16,🎯 全球直连
+  - IP-CIDR,10.0.0.0/8,🎯 全球直连
+
+  # 广告拦截
+  - DOMAIN-SUFFIX,doubleclick.net,🛑 广告拦截
+  - DOMAIN-KEYWORD,adservice,🛑 广告拦截
+
+  # Telegram
+  - DOMAIN-SUFFIX,telegram.org,📲 电报消息
+  - DOMAIN-SUFFIX,t.me,📲 电报消息
+  - IP-CIDR,91.108.4.0/22,📲 电报消息,no-resolve
+  - IP-CIDR,91.108.8.0/22,📲 电报消息,no-resolve
+  - IP-CIDR,91.108.16.0/22,📲 电报消息,no-resolve
+  - IP-CIDR,91.108.56.0/22,📲 电报消息,no-resolve
+  - IP-CIDR,149.154.160.0/20,📲 电报消息,no-resolve
+
+  # 流媒体
+  - DOMAIN-SUFFIX,netflix.com,🎥 流媒体
+  - DOMAIN-SUFFIX,youtube.com,🎥 流媒体
+  - DOMAIN-SUFFIX,spotify.com,🎥 流媒体
+
+  # 国内直连
+  - DOMAIN-SUFFIX,cn,🎯 全球直连
+  - DOMAIN-KEYWORD,baidu,🎯 全球直连
+  - DOMAIN-SUFFIX,taobao.com,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+
+  # 兜底规则
+  - MATCH,🐟 漏网之鱼
