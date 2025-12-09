@@ -32,12 +32,3 @@ DOMAIN-SUFFIX,ac.ca
 # > AU
 DOMAIN-SUFFIX,gov.au
 DOMAIN-SUFFIX,edu.au
-
-# > DE (德国)
-DOMAIN-SUFFIX,bund.de
-
-# > FR (法国)
-DOMAIN-SUFFIX,gouv.fr
-
-# > KR (韩国)
-DOMAIN-SUFFIX,go.kr
