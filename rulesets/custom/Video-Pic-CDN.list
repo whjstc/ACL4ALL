@@ -42,9 +42,9 @@ DOMAIN-SUFFIX,ttvnw.net
 DOMAIN-SUFFIX,licdn.com
 
 # TikTok (视频)
-#  - DOMAIN-SUFFIX,tiktokcdn.com
-#  - DOMAIN-SUFFIX,tiktokv.com
-#  - DOMAIN-SUFFIX,ttlivecdn.com
-#  - DOMAIN-SUFFIX,tiktokeu-cdn.com
-#  - DOMAIN-SUFFIX,tiktokrow-cdn.com
+#  DOMAIN-SUFFIX,tiktokcdn.com
+#  DOMAIN-SUFFIX,tiktokv.com
+#  DOMAIN-SUFFIX,ttlivecdn.com
+#  DOMAIN-SUFFIX,tiktokeu-cdn.com
+#  DOMAIN-SUFFIX,tiktokrow-cdn.com
 
