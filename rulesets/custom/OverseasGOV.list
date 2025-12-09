@@ -33,7 +33,11 @@ DOMAIN-SUFFIX,ac.ca
 DOMAIN-SUFFIX,gov.au
 DOMAIN-SUFFIX,edu.au
 
-# > 其他可能的海外政府/教育常用后缀 (可选补充)
-DOMAIN-SUFFIX,bund.de  # 德国
-DOMAIN-SUFFIX,gouv.fr  # 法国
-DOMAIN-SUFFIX,go.kr    # 韩国
+# > DE (德国)
+DOMAIN-SUFFIX,bund.de
+
+# > FR (法国)
+DOMAIN-SUFFIX,gouv.fr
+
+# > KR (韩国)
+DOMAIN-SUFFIX,go.kr
