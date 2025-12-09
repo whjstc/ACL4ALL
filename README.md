@@ -10,6 +10,8 @@
 ACL4ALL/
 ├── README.md                      # 本文档
 ├── .gitignore                     # Git 忽略文件配置
+├── LICENSE                        # 开源许可证
+├── SECURITY_CHECKLIST.md          # 安全检查清单
 │
 ├── subconverter/                  # Subconverter 配置模板
 │   ├── basic.ini                  # 基础版配置（简单分组）
@@ -20,7 +22,8 @@ ACL4ALL/
 │   ├── custom/                    # 自定义规则
 │   │   ├── direct.list            # 直连规则
 │   │   ├── proxy.list             # 代理规则
-│   │   └── reject.list            # 拦截规则
+│   │   ├── reject.list            # 拦截规则
+│   │   └── social-media-cdn.list  # 社媒 CDN 优先规则
 │   └── providers/                 # Rule Providers (YAML 格式)
 │       ├── direct.yaml            # 直连规则集
 │       └── proxy.yaml             # 代理规则集
@@ -31,12 +34,20 @@ ACL4ALL/
 ├── sing-box/                      # Sing-box 专用配置
 │   └── config.json                # Sing-box 配置示例
 │
-├── profiles/                      # 各平台配置文件
-│   ├── openclash/                 # OpenClash 覆写配置
-│   └── shadowrocket/              # Shadowrocket 模块
+├── Shadowrocket/                  # Shadowrocket 模块与脚本
+│   ├── modules/                   # .sgmodule 模块
+│   │   └── VVeboFix4Shadowrocket.sgmodule
+│   └── scripts/                   # 脚本
+│       └── vvebo-combined.js
+│
+├── profiles/                      # 个人化配置与模板
+│   ├── README.md
+│   └── custom-nodes.yaml.example  # 自定义节点模板（不提交真实信息）
 │
 └── examples/                      # 示例和文档
-    └── usage.md                   # 使用指南
+    ├── usage.md                   # 使用指南
+    ├── relay-setup.md             # Relay 使用示例
+    └── pref-custom-node.yml       # 自定义节点示例
 ```
 
 ## 🚀 快速开始
@@ -186,6 +197,14 @@ custom_proxy_group=🚀 节点选择`select`[]♻️ 自动选择`[]🇸🇬 新
 - [Sing-box 文档](https://sing-box.sagernet.org/)
 - [Subconverter 项目](https://github.com/tindy2013/subconverter)
 - [ACL4SSR 规则集](https://github.com/ACL4SSR/ACL4SSR)
+
+## 📝 更新日志
+
+- 2025-12-09
+  - 统一 `subconverter/advanced.ini` 中各策略组候选项顺序：`香港节点 → 美国节点 → 狮城节点 → 日本节点 → 台湾节点 → 韩国节点 → 节点选择 → DIRECT`
+  - 修复个别分组的旗帜字符损坏，并将 `DIRECT` 统一置于末尾
+  - 流媒体分组（YouTube、Netflix、Disney+、巴哈姆特、HBO、Spotify）顺序统一
+  - Shadowrocket 模块 `VVeboFix4Shadowrocket.sgmodule` 的 `script-path` 指向本仓库 Raw：`https://raw.githubusercontent.com/whjstc/ACL4ALL/main/Shadowrocket/scripts/vvebo-combined.js`
 
 ## 📄 许可证
 
