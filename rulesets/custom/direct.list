@@ -2,39 +2,10 @@
 # 格式: DOMAIN-SUFFIX,域名
 # 更新日期: 2025-12-08
 
-# 局域网地址
-DOMAIN-SUFFIX,local
-DOMAIN-SUFFIX,localhost
-DOMAIN-SUFFIX,lan
-
 # 公司内网（示例 - 请根据实际情况修改）
 # DOMAIN-SUFFIX,company.com
 # DOMAIN-KEYWORD,internal
 
-# 国内常用服务
-DOMAIN-SUFFIX,qq.com
-DOMAIN-SUFFIX,weixin.qq.com
-DOMAIN-SUFFIX,wechat.com
-DOMAIN-SUFFIX,taobao.com
-DOMAIN-SUFFIX,tmall.com
-DOMAIN-SUFFIX,jd.com
-DOMAIN-SUFFIX,alipay.com
-
-# 国内银行
-DOMAIN-SUFFIX,icbc.com.cn
-DOMAIN-SUFFIX,ccb.com
-DOMAIN-SUFFIX,abchina.com
-DOMAIN-SUFFIX,boc.cn
-
-# 教育网
-DOMAIN-SUFFIX,edu.cn
-DOMAIN-SUFFIX,ac.cn
-
-# 国内 CDN
-DOMAIN-SUFFIX,jsdelivr.net
-DOMAIN-SUFFIX,staticfile.org
-DOMAIN-SUFFIX,bootcdn.cn
-DOMAIN-SUFFIX,unpkg.com
 
 # 下载工具
 DOMAIN-SUFFIX,download.microsoft.com
@@ -44,3 +15,4 @@ DOMAIN-SUFFIX,dl.google.com
 # DOMAIN-SUFFIX,example.com
 # DOMAIN-KEYWORD,keyword
 # IP-CIDR,192.168.0.0/16
+DOMAIN-SUFFIX,chessease.net
