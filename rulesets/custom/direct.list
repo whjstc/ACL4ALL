@@ -6,6 +6,13 @@
 # DOMAIN-SUFFIX,company.com
 # DOMAIN-KEYWORD,internal
 
+# > Gmail Mail Server (大陆网络环境下直连通常无法使用，请谨慎)
+DOMAIN,imap.gmail.com
+DOMAIN,smtp.gmail.com
+DOMAIN,pop.gmail.com
+DOMAIN,imap.googlemail.com
+DOMAIN,smtp.googlemail.com
+DOMAIN,pop.googlemail.com
 
 # 下载工具
 DOMAIN-SUFFIX,download.microsoft.com
