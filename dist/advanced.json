@@ -1,0 +1,679 @@
+{
+  "proxyGroups": [
+    {
+      "name": "🚀 手动选择",
+      "type": "select",
+      "filter": "[]♻️ 自动选择`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 狮城节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]DIRECT"
+    },
+    {
+      "name": "♻️ 自动选择",
+      "type": "url-test",
+      "filter": ".*",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🔗 链式中转",
+      "type": "url-test",
+      "filter": "(?=.*(香港|HK|台湾|新加坡))((?!(直连|拒绝|住宅|IPV6)).)*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🏠 住宅出口",
+      "type": "select",
+      "filter": "[]🔗 链式中转`[]DIRECT"
+    },
+    {
+      "name": "🇭🇰 香港-手动",
+      "type": "select",
+      "filter": "(广港|香港|HK|Hong Kong|🇭🇰|HongKong)"
+    },
+    {
+      "name": "🇭🇰 香港-自动",
+      "type": "url-test",
+      "filter": "(广港|香港|HK|Hong Kong|🇭🇰|HongKong)",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇭🇰 香港节点",
+      "type": "fallback",
+      "filter": "[]🇭🇰 香港-手动",
+      "url": "[]🇭🇰 香港-自动",
+      "interval": 300,
+      "tolerance": 300,
+      "lazy": true
+    },
+    {
+      "name": "🇺🇸 美国-手动",
+      "type": "select",
+      "filter": "(广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)"
+    },
+    {
+      "name": "🇺🇸 美国-自动",
+      "type": "url-test",
+      "filter": "(广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇺🇸 美国节点",
+      "type": "fallback",
+      "filter": "[]🇺🇸 美国-手动",
+      "url": "[]🇺🇸 美国-自动",
+      "interval": 300,
+      "tolerance": 300,
+      "lazy": true
+    },
+    {
+      "name": "🇯🇵 日本-手动",
+      "type": "select",
+      "filter": "(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan)"
+    },
+    {
+      "name": "🇯🇵 日本-自动",
+      "type": "url-test",
+      "filter": "(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan)",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇯🇵 日本节点",
+      "type": "fallback",
+      "filter": "[]🇯🇵 日本-手动",
+      "url": "[]🇯🇵 日本-自动",
+      "interval": 300,
+      "tolerance": 300,
+      "lazy": true
+    },
+    {
+      "name": "🇸🇬 狮城-手动",
+      "type": "select",
+      "filter": "(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore)"
+    },
+    {
+      "name": "🇸🇬 狮城-自动",
+      "type": "url-test",
+      "filter": "(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore)",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇸🇬 狮城节点",
+      "type": "fallback",
+      "filter": "[]🇸🇬 狮城-手动",
+      "url": "[]🇸🇬 狮城-自动",
+      "interval": 300,
+      "tolerance": 300,
+      "lazy": true
+    },
+    {
+      "name": "🇨🇳 台湾-手动",
+      "type": "select",
+      "filter": "(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan)"
+    },
+    {
+      "name": "🇨🇳 台湾-自动",
+      "type": "url-test",
+      "filter": "(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan)",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇨🇳 台湾节点",
+      "type": "fallback",
+      "filter": "[]🇨🇳 台湾-手动",
+      "url": "[]🇨🇳 台湾-自动",
+      "interval": 300,
+      "tolerance": 300,
+      "lazy": true
+    },
+    {
+      "name": "🇰🇷 韩国-手动",
+      "type": "select",
+      "filter": "(韩|韩国|首尔|KR|Korea|🇰🇷)"
+    },
+    {
+      "name": "🇰🇷 韩国-自动",
+      "type": "url-test",
+      "filter": "(韩|韩国|首尔|KR|Korea|🇰🇷)",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇰🇷 韩国节点",
+      "type": "fallback",
+      "filter": "[]🇰🇷 韩国-手动",
+      "url": "[]🇰🇷 韩国-自动",
+      "interval": 300,
+      "tolerance": 300,
+      "lazy": true
+    },
+    {
+      "name": "🤖 AI 服务",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "📡 社媒CDN",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "📱 社交媒体",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "📱 TikTok",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "🌐 网络检测",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "🏛️ 海外政府",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "📲 电报消息",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "💬 Discord",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "🎮 游戏平台",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "🎮 Steam",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "💰 Crypto",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "🍎 苹果服务",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "Ⓜ️ 微软服务",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "🐧 谷歌服务",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "💻 GitHub",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "🐳 Docker",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "📺 巴哈姆特",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "📺 哔哩哔哩",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "🎬 Netflix",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "🎬 Disney+",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "📹 YouTube",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "🎬 HBO",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "🎵 Spotify",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇨🇳 台湾节点`[]🇰🇷 韩国节点`[]🚀 手动选择`[]DIRECT"
+    },
+    {
+      "name": "🎯 全球直连",
+      "type": "select",
+      "filter": "[]DIRECT`[]🚀 手动选择"
+    },
+    {
+      "name": "🛑 广告拦截",
+      "type": "select",
+      "filter": "[]REJECT`[]DIRECT"
+    },
+    {
+      "name": "🔀 非标端口",
+      "type": "select",
+      "filter": "[]🎯 全球直连`[]🚀 手动选择"
+    },
+    {
+      "name": "🐟 漏网之鱼",
+      "type": "select",
+      "filter": "[]🚀 手动选择`[]♻️ 自动选择`[]DIRECT"
+    }
+  ],
+  "ruleProviders": {
+    "RP_37C9A512": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/direct.list,28800",
+      "path": "./ruleset/RP_37C9A512.yaml",
+      "interval": 86400
+    },
+    "RP_253862E0": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/proxy.list,28800",
+      "path": "./ruleset/RP_253862E0.yaml",
+      "interval": 86400
+    },
+    "RP_63737F44": {
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.yaml,28800",
+      "path": "./ruleset/RP_63737F44.yaml",
+      "interval": 86400
+    },
+    "RP_D89BAD87": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical_IP.yaml,28800",
+      "path": "./ruleset/RP_D89BAD87.yaml",
+      "interval": 86400
+    },
+    "RP_FDE8E76D": {
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.yaml,28800",
+      "path": "./ruleset/RP_FDE8E76D.yaml",
+      "interval": 86400
+    },
+    "RP_417E58B7": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical_IP.yaml,28800",
+      "path": "./ruleset/RP_417E58B7.yaml",
+      "interval": 86400
+    },
+    "RP_D75BC1A9": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml,28800",
+      "path": "./ruleset/RP_D75BC1A9.yaml",
+      "interval": 86400
+    },
+    "RP_32546DEE": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/NetworkCheck.list,28800",
+      "path": "./ruleset/RP_32546DEE.yaml",
+      "interval": 86400
+    },
+    "RP_2EB01BC8": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/OverseasGOV.list,28800",
+      "path": "./ruleset/RP_2EB01BC8.yaml",
+      "interval": 86400
+    },
+    "RP_84E01B66": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanAD.list,28800",
+      "path": "./ruleset/RP_84E01B66.yaml",
+      "interval": 86400
+    },
+    "RP_AC8D5D39": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanProgramAD.list,28800",
+      "path": "./ruleset/RP_AC8D5D39.yaml",
+      "interval": 86400
+    },
+    "RP_3B7FC8DF": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/AI.list,28800",
+      "path": "./ruleset/RP_3B7FC8DF.yaml",
+      "interval": 86400
+    },
+    "RP_6751079D": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/Claude.list,28800",
+      "path": "./ruleset/RP_6751079D.yaml",
+      "interval": 86400
+    },
+    "RP_71854568": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/Gemini.list,28800",
+      "path": "./ruleset/RP_71854568.yaml",
+      "interval": 86400
+    },
+    "RP_59DF2EE2": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/Video-Pic-CDN.list,28800",
+      "path": "./ruleset/RP_59DF2EE2.yaml",
+      "interval": 86400
+    },
+    "RP_53A459D0": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/Youtube.list,28800",
+      "path": "./ruleset/RP_53A459D0.yaml",
+      "interval": 86400
+    },
+    "RP_01F46EB2": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/Netflix.list,28800",
+      "path": "./ruleset/RP_01F46EB2.yaml",
+      "interval": 86400
+    },
+    "RP_BA42ED58": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/DisneyPlus.list,28800",
+      "path": "./ruleset/RP_BA42ED58.yaml",
+      "interval": 86400
+    },
+    "RP_8BD43D6D": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/HBO/HBO.list,28800",
+      "path": "./ruleset/RP_8BD43D6D.yaml",
+      "interval": 86400
+    },
+    "RP_416DA39F": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/Spotify.list,28800",
+      "path": "./ruleset/RP_416DA39F.yaml",
+      "interval": 86400
+    },
+    "RP_2F978BFE": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/Bahamut.list,28800",
+      "path": "./ruleset/RP_2F978BFE.yaml",
+      "interval": 86400
+    },
+    "RP_FE945928": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/BilibiliHMT.list,28800",
+      "path": "./ruleset/RP_FE945928.yaml",
+      "interval": 86400
+    },
+    "RP_AB5FE62F": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/Bilibili.list,28800",
+      "path": "./ruleset/RP_AB5FE62F.yaml",
+      "interval": 86400
+    },
+    "RP_6396E7EB": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Telegram.list,28800",
+      "path": "./ruleset/RP_6396E7EB.yaml",
+      "interval": 86400
+    },
+    "RP_FC25B91B": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Discord.list,28800",
+      "path": "./ruleset/RP_FC25B91B.yaml",
+      "interval": 86400
+    },
+    "RP_6B3B6134": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/Steam.list,28800",
+      "path": "./ruleset/RP_6B3B6134.yaml",
+      "interval": 86400
+    },
+    "RP_EB0A718A": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/SteamCN.list,28800",
+      "path": "./ruleset/RP_EB0A718A.yaml",
+      "interval": 86400
+    },
+    "RP_7D6B6886": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Epic.list,28800",
+      "path": "./ruleset/RP_7D6B6886.yaml",
+      "interval": 86400
+    },
+    "RP_469ED355": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/EA/EA.list,28800",
+      "path": "./ruleset/RP_469ED355.yaml",
+      "interval": 86400
+    },
+    "RP_7BCAA29C": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Blizzard/Blizzard.list,28800",
+      "path": "./ruleset/RP_7BCAA29C.yaml",
+      "interval": 86400
+    },
+    "RP_59D48C19": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/UBI/UBI.list,28800",
+      "path": "./ruleset/RP_59D48C19.yaml",
+      "interval": 86400
+    },
+    "RP_052B8FDA": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Sony.list,28800",
+      "path": "./ruleset/RP_052B8FDA.yaml",
+      "interval": 86400
+    },
+    "RP_864E2C5E": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Nintendo/Nintendo.list,28800",
+      "path": "./ruleset/RP_864E2C5E.yaml",
+      "interval": 86400
+    },
+    "RP_2297349B": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.list,28800",
+      "path": "./ruleset/RP_2297349B.yaml",
+      "interval": 86400
+    },
+    "RP_E88CACCA": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Docker/Docker.list,28800",
+      "path": "./ruleset/RP_E88CACCA.yaml",
+      "interval": 86400
+    },
+    "RP_3E8D1AD7": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/Binance.list,28800",
+      "path": "./ruleset/RP_3E8D1AD7.yaml",
+      "interval": 86400
+    },
+    "RP_C4E863F9": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/Bybit.list,28800",
+      "path": "./ruleset/RP_C4E863F9.yaml",
+      "interval": 86400
+    },
+    "RP_0ED3B513": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/OKX.list,28800",
+      "path": "./ruleset/RP_0ED3B513.yaml",
+      "interval": 86400
+    },
+    "RP_8222A742": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/Apple.list,28800",
+      "path": "./ruleset/RP_8222A742.yaml",
+      "interval": 86400
+    },
+    "RP_6FA5EA9A": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/Microsoft.list,28800",
+      "path": "./ruleset/RP_6FA5EA9A.yaml",
+      "interval": 86400
+    },
+    "RP_6C29D8E0": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/OneDrive.list,28800",
+      "path": "./ruleset/RP_6C29D8E0.yaml",
+      "interval": 86400
+    },
+    "RP_49BF514C": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/dl123100/clash-geosite@master/rule-files/Google.list,28800",
+      "path": "./ruleset/RP_49BF514C.yaml",
+      "interval": 86400
+    },
+    "RP_EEF121DC": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/GoogleFCM.list,28800",
+      "path": "./ruleset/RP_EEF121DC.yaml",
+      "interval": 86400
+    },
+    "RP_C41217FE": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyGFWlist.list,28800",
+      "path": "./ruleset/RP_C41217FE.yaml",
+      "interval": 86400
+    },
+    "RP_D945FB0B": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml,28800",
+      "path": "./ruleset/RP_D945FB0B.yaml",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "GEOSITE,private,🎯 全球直连",
+    "GEOIP,private,no-resolve,🎯 全球直连",
+    "RULE-SET,RP_37C9A512,🎯 全球直连",
+    "RULE-SET,RP_253862E0,🎯 全球直连",
+    "RULE-SET,RP_63737F44,🎯 全球直连",
+    "RULE-SET,RP_D89BAD87,🎯 全球直连",
+    "RULE-SET,RP_FDE8E76D,🚀 手动选择",
+    "RULE-SET,RP_417E58B7,🚀 手动选择",
+    "GEOSITE,google-cn,🎯 全球直连",
+    "GEOSITE,category-games@cn,🎯 全球直连",
+    "RULE-SET,RP_D75BC1A9,🎯 全球直连",
+    "GEOSITE,category-game-platforms-download,🎯 全球直连",
+    "GEOSITE,category-public-tracker,🎯 全球直连",
+    "RULE-SET,RP_32546DEE,🌐 网络检测",
+    "RULE-SET,RP_2EB01BC8,🏛️ 海外政府",
+    "RULE-SET,RP_84E01B66,🛑 广告拦截",
+    "RULE-SET,RP_AC8D5D39,🛑 广告拦截",
+    "RULE-SET,RP_3B7FC8DF,🤖 AI 服务",
+    "RULE-SET,RP_6751079D,🤖 AI 服务",
+    "RULE-SET,RP_71854568,🤖 AI 服务",
+    "RULE-SET,RP_59DF2EE2,📡 社媒CDN",
+    "GEOSITE,category-social-media-!cn,📱 社交媒体",
+    "RULE-SET,RP_53A459D0,📹 YouTube",
+    "RULE-SET,RP_01F46EB2,🎬 Netflix",
+    "RULE-SET,RP_BA42ED58,🎬 Disney+",
+    "RULE-SET,RP_8BD43D6D,🎬 HBO",
+    "RULE-SET,RP_416DA39F,🎵 Spotify",
+    "RULE-SET,RP_2F978BFE,📺 巴哈姆特",
+    "RULE-SET,RP_FE945928,📺 哔哩哔哩",
+    "RULE-SET,RP_AB5FE62F,📺 哔哩哔哩",
+    "RULE-SET,RP_6396E7EB,📲 电报消息",
+    "RULE-SET,RP_FC25B91B,💬 Discord",
+    "RULE-SET,RP_6B3B6134,🎮 Steam",
+    "RULE-SET,RP_EB0A718A,🎮 Steam",
+    "RULE-SET,RP_7D6B6886,🎮 游戏平台",
+    "RULE-SET,RP_469ED355,🎮 游戏平台",
+    "RULE-SET,RP_7BCAA29C,🎮 游戏平台",
+    "RULE-SET,RP_59D48C19,🎮 游戏平台",
+    "RULE-SET,RP_052B8FDA,🎮 游戏平台",
+    "RULE-SET,RP_864E2C5E,🎮 游戏平台",
+    "RULE-SET,RP_2297349B,💻 GitHub",
+    "RULE-SET,RP_E88CACCA,🐳 Docker",
+    "RULE-SET,RP_3E8D1AD7,💰 Crypto",
+    "RULE-SET,RP_C4E863F9,💰 Crypto",
+    "RULE-SET,RP_0ED3B513,💰 Crypto",
+    "RULE-SET,RP_8222A742,🍎 苹果服务",
+    "RULE-SET,RP_6FA5EA9A,Ⓜ️ 微软服务",
+    "RULE-SET,RP_6C29D8E0,Ⓜ️ 微软服务",
+    "RULE-SET,RP_49BF514C,🐧 谷歌服务",
+    "RULE-SET,RP_EEF121DC,🐧 谷歌服务",
+    "RULE-SET,RP_C41217FE,🚀 手动选择",
+    "GEOSITE,cn,🎯 全球直连",
+    "GEOIP,cn,no-resolve,🎯 全球直连",
+    "RULE-SET,RP_D945FB0B,🔀 非标端口",
+    "MATCH,🐟 漏网之鱼"
+  ]
+}

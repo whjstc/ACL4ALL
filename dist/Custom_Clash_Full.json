@@ -1,0 +1,405 @@
+{
+  "proxyGroups": [
+    {
+      "name": "🚀 手动选择",
+      "type": "select",
+      "filter": "[]♻️ 自动选择`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`.*"
+    },
+    {
+      "name": "♻️ 自动选择",
+      "type": "url-test",
+      "filter": ".*",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "💬 即时通讯",
+      "type": "select",
+      "filter": "[]♻️ 自动选择`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择"
+    },
+    {
+      "name": "🌐 社交媒体",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`.*"
+    },
+    {
+      "name": "📞 Talkatone",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连`.*"
+    },
+    {
+      "name": "🚀 GitHub",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连"
+    },
+    {
+      "name": "🤖 ChatGPT",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`.*"
+    },
+    {
+      "name": "🤖 Copilot",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连`.*"
+    },
+    {
+      "name": "🤖 AI服务",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`.*"
+    },
+    {
+      "name": "🎶 TikTok",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连`.*"
+    },
+    {
+      "name": "📹 YouTube",
+      "type": "select",
+      "filter": "[]🇸🇬 新加坡节点`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`.*"
+    },
+    {
+      "name": "🎥 Netflix",
+      "type": "select",
+      "filter": "[]🇸🇬 新加坡节点`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`.*"
+    },
+    {
+      "name": "🎥 DisneyPlus",
+      "type": "select",
+      "filter": "[]🇸🇬 新加坡节点`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`.*"
+    },
+    {
+      "name": "🎥 HBO",
+      "type": "select",
+      "filter": "[]🇸🇬 新加坡节点`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连`.*"
+    },
+    {
+      "name": "🎥 PrimeVideo",
+      "type": "select",
+      "filter": "[]🇸🇬 新加坡节点`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连`.*"
+    },
+    {
+      "name": "🎥 AppleTV+",
+      "type": "select",
+      "filter": "[]🇸🇬 新加坡节点`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连`.*"
+    },
+    {
+      "name": "🎥 Emby",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连`.*"
+    },
+    {
+      "name": "🎻 Spotify",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连`.*"
+    },
+    {
+      "name": "📺 Bahamut",
+      "type": "select",
+      "filter": "[]🇼🇸 台湾节点`[]🚀 手动选择`[]🎯 全球直连"
+    },
+    {
+      "name": "🌎 国外媒体",
+      "type": "select",
+      "filter": "[]🇸🇬 新加坡节点`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连`.*"
+    },
+    {
+      "name": "💳 PayPal",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连`.*"
+    },
+    {
+      "name": "🛒 国外电商",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连`.*"
+    },
+    {
+      "name": "📢 谷歌FCM",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连"
+    },
+    {
+      "name": "🇬 谷歌服务",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连"
+    },
+    {
+      "name": "🍎 苹果服务",
+      "type": "select",
+      "filter": "[]🎯 全球直连`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择"
+    },
+    {
+      "name": "Ⓜ️ 微软服务",
+      "type": "select",
+      "filter": "[]🎯 全球直连`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择"
+    },
+    {
+      "name": "💾 OneDrive",
+      "type": "select",
+      "filter": "[]🎯 全球直连`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择"
+    },
+    {
+      "name": "🎮 游戏平台",
+      "type": "select",
+      "filter": "[]🎯 全球直连`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择"
+    },
+    {
+      "name": "🎮 Steam",
+      "type": "select",
+      "filter": "[]🎯 全球直连`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`.*"
+    },
+    {
+      "name": "⏬ PT站点",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连`.*"
+    },
+    {
+      "name": "🚀 测速工具",
+      "type": "select",
+      "filter": "[]🎯 全球直连`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`.*"
+    },
+    {
+      "name": "🐟 漏网之鱼",
+      "type": "select",
+      "filter": "[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🏠 家宽节点`[]🌐 其他地区`[]🚀 手动选择`[]♻️ 自动选择`[]🎯 全球直连`.*"
+    },
+    {
+      "name": "🔀 非标端口",
+      "type": "select",
+      "filter": "[]🐟 遵循规则`[]🎯 全球直连"
+    },
+    {
+      "name": "🇭🇰 香港节点",
+      "type": "url-test",
+      "filter": "(港|HK|hk|Hong Kong|HongKong|hongkong|深港)",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇺🇸 美国节点",
+      "type": "url-test",
+      "filter": "(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|UnitedStates)",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇯🇵 日本节点",
+      "type": "url-test",
+      "filter": "(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|JP|Japan|🇯🇵)",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇸🇬 新加坡节点",
+      "type": "url-test",
+      "filter": "(新加坡|坡|狮城|SG|Singapore)",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇼🇸 台湾节点",
+      "type": "url-test",
+      "filter": "(台|新北|彰化|TW|Taiwan)",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇰🇷 韩国节点",
+      "type": "url-test",
+      "filter": "(KR|Korea|KOR|首尔|韩|韓)",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇨🇦 加拿大节点",
+      "type": "url-test",
+      "filter": "(加拿大|Canada|渥太华|温哥华|卡尔加里)",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇬🇧 英国节点",
+      "type": "url-test",
+      "filter": "(英国|Britain|United Kingdom|England|伦敦)",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇫🇷 法国节点",
+      "type": "url-test",
+      "filter": "(法国|France|巴黎)",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇩🇪 德国节点",
+      "type": "url-test",
+      "filter": "(德国|Germany|柏林|法兰克福)",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇳🇱 荷兰节点",
+      "type": "url-test",
+      "filter": "(荷兰|Netherlands|阿姆斯特丹)",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇹🇷 土耳其节点",
+      "type": "url-test",
+      "filter": "(土耳其|Turkey|Türkiye)",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🌐 其他地区",
+      "type": "url-test",
+      "filter": "(^(?!.*(港|HK|hk|Hong Kong|HongKong|hongkong|深港|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|UnitedStates|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|JP|Japan|🇯🇵|新加坡|坡|狮城|SG|Singapore|台|新北|彰化|TW|Taiwan|KR|Korea|KOR|首尔|韩|韓|加拿大|Canada|渥太华|温哥华|卡尔加里|英国|Britain|United Kingdom|England|伦敦|法国|France|巴黎|德国|Germany|柏林|法兰克福|荷兰|Netherlands|阿姆斯特丹|土耳其|Turkey|Türkiye|家宽|家庭宽带|住宅)).*)",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🏠 家宽节点",
+      "type": "url-test",
+      "filter": "(家宽|家庭宽带|住宅)",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🎯 全球直连",
+      "type": "select",
+      "filter": "[]DIRECT"
+    },
+    {
+      "name": "🐟 遵循规则",
+      "type": "select",
+      "filter": "[]🐟 漏网之鱼"
+    }
+  ],
+  "ruleProviders": {
+    "RP_63737F44": {
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.yaml,28800",
+      "path": "./ruleset/RP_63737F44.yaml",
+      "interval": 86400
+    },
+    "RP_D89BAD87": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical_IP.yaml,28800",
+      "path": "./ruleset/RP_D89BAD87.yaml",
+      "interval": 86400
+    },
+    "RP_FDE8E76D": {
+      "type": "http",
+      "behavior": "domain",
+      "url": "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.yaml,28800",
+      "path": "./ruleset/RP_FDE8E76D.yaml",
+      "interval": 86400
+    },
+    "RP_417E58B7": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical_IP.yaml,28800",
+      "path": "./ruleset/RP_417E58B7.yaml",
+      "interval": 86400
+    },
+    "RP_D2E9F20A": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml,2880",
+      "path": "./ruleset/RP_D2E9F20A.yaml",
+      "interval": 86400
+    },
+    "RP_D945FB0B": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml,28800",
+      "path": "./ruleset/RP_D945FB0B.yaml",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "GEOSITE,private,🎯 全球直连",
+    "GEOIP,private,no-resolve,🎯 全球直连",
+    "RULE-SET,RP_63737F44,🎯 全球直连",
+    "RULE-SET,RP_D89BAD87,🎯 全球直连",
+    "RULE-SET,RP_FDE8E76D,🚀 手动选择",
+    "RULE-SET,RP_417E58B7,🚀 手动选择",
+    "GEOSITE,google-cn,🎯 全球直连",
+    "GEOSITE,category-games@cn,🎯 全球直连",
+    "RULE-SET,RP_D2E9F20A,🎯 全球直连",
+    "GEOSITE,category-game-platforms-download,🎯 全球直连",
+    "GEOSITE,category-public-tracker,🎯 全球直连",
+    "GEOSITE,category-communication,💬 即时通讯",
+    "GEOSITE,category-social-media-!cn,🌐 社交媒体",
+    "GEOSITE,talkatone,📞 Talkatone",
+    "GEOSITE,openai,🤖 ChatGPT",
+    "GEOSITE,onedrive,💾 OneDrive",
+    "GEOSITE,bing,🤖 Copilot",
+    "GEOSITE,category-ai-!cn,🤖 AI服务",
+    "GEOSITE,github,🚀 GitHub",
+    "GEOSITE,category-speedtest,🚀 测速工具",
+    "GEOSITE,steam,🎮 Steam",
+    "GEOSITE,youtube,📹 YouTube",
+    "GEOSITE,apple-tvplus,🎥 AppleTV+",
+    "GEOSITE,apple,🍎 苹果服务",
+    "GEOSITE,microsoft,Ⓜ️ 微软服务",
+    "GEOSITE,googlefcm,📢 谷歌FCM",
+    "GEOSITE,google,🇬 谷歌服务",
+    "GEOSITE,tiktok,🎶 TikTok",
+    "GEOSITE,netflix,🎥 Netflix",
+    "GEOSITE,disney,🎥 DisneyPlus",
+    "GEOSITE,hbo,🎥 HBO",
+    "GEOSITE,primevideo,🎥 PrimeVideo",
+    "GEOSITE,category-emby,🎥 Emby",
+    "GEOSITE,spotify,🎻 Spotify",
+    "GEOSITE,bahamut,📺 Bahamut",
+    "GEOSITE,category-games,🎮 游戏平台",
+    "GEOSITE,category-entertainment,🌎 国外媒体",
+    "GEOSITE,category-pt,⏬ PT站点",
+    "GEOSITE,paypal,💳 PayPal",
+    "GEOSITE,category-ecommerce,🛒 国外电商",
+    "GEOSITE,gfw,🚀 手动选择",
+    "GEOIP,telegram,no-resolve,💬 即时通讯",
+    "GEOIP,twitter,no-resolve,🌐 社交媒体",
+    "GEOIP,facebook,no-resolve,🌐 社交媒体",
+    "GEOIP,google,no-resolve,🇬 谷歌服务",
+    "GEOIP,netflix,no-resolve,🎥 Netflix",
+    "GEOSITE,cn,🎯 全球直连",
+    "GEOIP,cn,no-resolve,🎯 全球直连",
+    "RULE-SET,RP_D945FB0B,🔀 非标端口",
+    "MATCH,🐟 漏网之鱼"
+  ]
+}

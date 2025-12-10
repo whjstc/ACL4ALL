@@ -1,0 +1,183 @@
+{
+  "proxyGroups": [
+    {
+      "name": "🚀 节点选择",
+      "type": "select",
+      "filter": "[]♻️ 自动选择`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 狮城节点`[]🇨🇳 台湾节点`[]DIRECT"
+    },
+    {
+      "name": "♻️ 自动选择",
+      "type": "url-test",
+      "filter": ".*",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇭🇰 香港节点",
+      "type": "url-test",
+      "filter": "(港|HK|Hong Kong|🇭🇰)",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇺🇸 美国节点",
+      "type": "url-test",
+      "filter": "(美|US|United States|🇺🇸)",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇯🇵 日本节点",
+      "type": "url-test",
+      "filter": "(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|🇯🇵)",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇸🇬 狮城节点",
+      "type": "url-test",
+      "filter": "(新加坡|坡|狮城|SG|Singapore|🇸🇬)",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "🇨🇳 台湾节点",
+      "type": "url-test",
+      "filter": "(台|TW|Taiwan|🇨🇳)",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "lazy": true
+    },
+    {
+      "name": "📲 电报消息",
+      "type": "select",
+      "filter": "[]🚀 节点选择`[]♻️ 自动选择`[]🇸🇬 狮城节点`[]🇭🇰 香港节点`[]DIRECT"
+    },
+    {
+      "name": "🎥 流媒体",
+      "type": "select",
+      "filter": "[]🚀 节点选择`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 狮城节点`[]🇨🇳 台湾节点"
+    },
+    {
+      "name": "🍎 苹果服务",
+      "type": "select",
+      "filter": "[]DIRECT`[]🚀 节点选择`[]♻️ 自动选择"
+    },
+    {
+      "name": "Ⓜ️ 微软服务",
+      "type": "select",
+      "filter": "[]DIRECT`[]🚀 节点选择`[]♻️ 自动选择"
+    },
+    {
+      "name": "🎯 全球直连",
+      "type": "select",
+      "filter": "[]DIRECT`[]🚀 节点选择"
+    },
+    {
+      "name": "🛑 广告拦截",
+      "type": "select",
+      "filter": "[]REJECT`[]DIRECT"
+    },
+    {
+      "name": "🐟 漏网之鱼",
+      "type": "select",
+      "filter": "[]🚀 节点选择`[]DIRECT`[]♻️ 自动选择"
+    }
+  ],
+  "ruleProviders": {
+    "RP_6BD2D523": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list",
+      "path": "./ruleset/RP_6BD2D523.yaml",
+      "interval": 86400
+    },
+    "RP_6C03DD85": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list",
+      "path": "./ruleset/RP_6C03DD85.yaml",
+      "interval": 86400
+    },
+    "RP_3DEE878D": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
+      "path": "./ruleset/RP_3DEE878D.yaml",
+      "interval": 86400
+    },
+    "RP_430DB254": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list",
+      "path": "./ruleset/RP_430DB254.yaml",
+      "interval": 86400
+    },
+    "RP_D9BB48F8": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list",
+      "path": "./ruleset/RP_D9BB48F8.yaml",
+      "interval": 86400
+    },
+    "RP_22342AE6": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list",
+      "path": "./ruleset/RP_22342AE6.yaml",
+      "interval": 86400
+    },
+    "RP_464C59F3": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list",
+      "path": "./ruleset/RP_464C59F3.yaml",
+      "interval": 86400
+    },
+    "RP_EF34E934": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list",
+      "path": "./ruleset/RP_EF34E934.yaml",
+      "interval": 86400
+    },
+    "RP_0D8A6A76": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list",
+      "path": "./ruleset/RP_0D8A6A76.yaml",
+      "interval": 86400
+    },
+    "RP_C36D01F9": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list",
+      "path": "./ruleset/RP_C36D01F9.yaml",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "RULE-SET,RP_6BD2D523,🎯 全球直连",
+    "RULE-SET,RP_6C03DD85,🛑 广告拦截",
+    "RULE-SET,RP_3DEE878D,🛑 广告拦截",
+    "RULE-SET,RP_430DB254,📲 电报消息",
+    "RULE-SET,RP_D9BB48F8,🎥 流媒体",
+    "RULE-SET,RP_22342AE6,🍎 苹果服务",
+    "RULE-SET,RP_464C59F3,Ⓜ️ 微软服务",
+    "RULE-SET,RP_EF34E934,🎯 全球直连",
+    "RULE-SET,RP_0D8A6A76,🎯 全球直连",
+    "RULE-SET,RP_C36D01F9,🚀 节点选择",
+    "MATCH,🐟 漏网之鱼"
+  ]
+}
