@@ -24,6 +24,7 @@ DOMAIN-SUFFIX,dl.google.com
 # IP-CIDR,192.168.0.0/16
 DOMAIN-SUFFIX,chessease.net
 DOMAIN-SUFFIX,banxiaoer.com
+DOMAIN-SUFFIX,banxiaoer.net
 
 
 # NAME: Custom_Direct
