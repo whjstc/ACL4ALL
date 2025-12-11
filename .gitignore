@@ -102,3 +102,8 @@ ENV/
 notes.md
 TODO.md
 私人笔记.md
+
+# === 自动生成的文件 ===
+# YAML 规则文件由 GitHub Actions 自动生成，本地不提交
+# 只维护 .list 源文件，避免与 Actions 提交冲突
+rulesets/**/*.yaml
