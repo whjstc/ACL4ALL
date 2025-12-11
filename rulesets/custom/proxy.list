@@ -7,3 +7,7 @@
 # DOMAIN-SUFFIX,example.com
 # DOMAIN-KEYWORD,keyword
 DOMAIN-SUFFIX,cdn.jsdelivr.net
+
+
+# OneDrive 网页版
+DOMAIN-SUFFIX,onedrive.live.com

@@ -126,9 +126,9 @@ proxy-groups:
     url: "https://cp.cloudflare.com/generate_204"
     interval: 300
     proxies:
+    - "🇭🇰 香港节点"
     - "🏠 住宅出口"
     - "♻️ 自动选择"
-    - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
@@ -148,33 +148,12 @@ proxy-groups:
     
   - name: "♻️ 自动选择"
     type: url-test
-    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    filter: "^(?!.*(DIRECT|移动|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     tolerance: 50
     url: "https://cp.cloudflare.com/generate_204"
     interval: 300
     use:
       - provider1
-
-  - name: "💬 即时通讯"
-    type: select
-    proxies:
-    - "🏠 住宅出口"
-    - "♻️ 自动选择"
-    - "🇭🇰 香港节点"
-    - "🇺🇸 美国节点"
-    - "🇯🇵 日本节点"
-    - "🇸🇬 新加坡节点"
-    - "🇼🇸 台湾节点"
-    - "🇰🇷 韩国节点"
-    - "🇨🇦 加拿大节点"
-    - "🇬🇧 英国节点"
-    - "🇫🇷 法国节点"
-    - "🇩🇪 德国节点"
-    - "🇳🇱 荷兰节点"
-    - "🇹🇷 土耳其节点"
-    - "🌐 其他地区"
-    - "🚀 手动选择"
-    - "🎯 全球直连"
 
   - name: "🌐 网络检测"
     type: select
@@ -225,9 +204,9 @@ proxy-groups:
   - name: "📡 社媒CDN"
     type: select
     proxies:
+    - "🇭🇰 香港节点"
     - "🏠 住宅出口"
     - "♻️ 自动选择"
-    - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
@@ -386,6 +365,48 @@ proxy-groups:
     use:
       - provider1
 
+  - name: "📲 电报消息"
+    type: select
+    proxies:
+    - "🇭🇰 香港节点"
+    - "🏠 住宅出口"
+    - "♻️ 自动选择"
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇸🇬 新加坡节点"
+    - "🇼🇸 台湾节点"
+    - "🇰🇷 韩国节点"
+    - "🇨🇦 加拿大节点"
+    - "🇬🇧 英国节点"
+    - "🇫🇷 法国节点"
+    - "🇩🇪 德国节点"
+    - "🇳🇱 荷兰节点"
+    - "🇹🇷 土耳其节点"
+    - "🌐 其他地区"
+    - "🚀 手动选择"
+    - "🎯 全球直连"
+
+  - name: "💬 即时通讯"
+    type: select
+    proxies:
+    - "🏠 住宅出口"
+    - "♻️ 自动选择"
+    - "🇭🇰 香港节点"
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇸🇬 新加坡节点"
+    - "🇼🇸 台湾节点"
+    - "🇰🇷 韩国节点"
+    - "🇨🇦 加拿大节点"
+    - "🇬🇧 英国节点"
+    - "🇫🇷 法国节点"
+    - "🇩🇪 德国节点"
+    - "🇳🇱 荷兰节点"
+    - "🇹🇷 土耳其节点"
+    - "🌐 其他地区"
+    - "🚀 手动选择"
+    - "🎯 全球直连"
+
   - name: "📹 YouTube"
     type: select
     proxies:
@@ -413,12 +434,12 @@ proxy-groups:
   - name: "🎥 Netflix"
     type: select
     proxies:
+    - "🇼🇸 台湾节点"
     - "🏠 住宅出口"
     - "🇸🇬 新加坡节点"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
-    - "🇼🇸 台湾节点"
     - "🇰🇷 韩国节点"
     - "🇨🇦 加拿大节点"
     - "🇬🇧 英国节点"
@@ -437,12 +458,12 @@ proxy-groups:
   - name: "🎥 DisneyPlus"
     type: select
     proxies:
+    - "🇼🇸 台湾节点"
     - "🏠 住宅出口"
     - "🇸🇬 新加坡节点"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
-    - "🇼🇸 台湾节点"
     - "🇰🇷 韩国节点"
     - "🇨🇦 加拿大节点"
     - "🇬🇧 英国节点"
@@ -461,12 +482,12 @@ proxy-groups:
   - name: "🎥 HBO"
     type: select
     proxies:
+    - "🇼🇸 台湾节点"
     - "🏠 住宅出口"
     - "🇸🇬 新加坡节点"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
-    - "🇼🇸 台湾节点"
     - "🇰🇷 韩国节点"
     - "🇨🇦 加拿大节点"
     - "🇬🇧 英国节点"
@@ -485,12 +506,12 @@ proxy-groups:
   - name: "🎥 PrimeVideo"
     type: select
     proxies:
+    - "🇼🇸 台湾节点"
     - "🏠 住宅出口"
     - "🇸🇬 新加坡节点"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
-    - "🇼🇸 台湾节点"
     - "🇰🇷 韩国节点"
     - "🇨🇦 加拿大节点"
     - "🇬🇧 英国节点"
@@ -509,12 +530,12 @@ proxy-groups:
   - name: "🎥 AppleTV+"
     type: select
     proxies:
+    - "🇼🇸 台湾节点"
     - "🏠 住宅出口"
     - "🇸🇬 新加坡节点"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
-    - "🇼🇸 台湾节点"
     - "🇰🇷 韩国节点"
     - "🇨🇦 加拿大节点"
     - "🇬🇧 英国节点"
@@ -533,8 +554,9 @@ proxy-groups:
   - name: "🎥 Emby"
     type: select
     proxies:
-    - "🏠 住宅出口"
+    - "🎯 全球直连"
     - "🇭🇰 香港节点"
+    - "🏠 住宅出口"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
@@ -549,7 +571,6 @@ proxy-groups:
     - "🌐 其他地区"
     - "🚀 手动选择"
     - "♻️ 自动选择"
-    - "🎯 全球直连"
     filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
     use:
       - provider1
@@ -557,12 +578,12 @@ proxy-groups:
   - name: "🎻 Spotify"
     type: select
     proxies:
+    - "🇼🇸 台湾节点"
     - "🏠 住宅出口"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
-    - "🇼🇸 台湾节点"
     - "🇰🇷 韩国节点"
     - "🇨🇦 加拿大节点"
     - "🇬🇧 英国节点"
@@ -581,8 +602,8 @@ proxy-groups:
   - name: "📺 Bahamut"
     type: select
     proxies:
-    - "🏠 住宅出口"
     - "🇼🇸 台湾节点"
+    - "🏠 住宅出口"
     - "🚀 手动选择"
     - "♻️ 自动选择"
     - "🎯 全球直连"
@@ -591,8 +612,8 @@ proxy-groups:
     type: select
     proxies:
     - "🏠 住宅出口"
-    - "🇸🇬 新加坡节点"
     - "🇭🇰 香港节点"
+    - "🇸🇬 新加坡节点"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
     - "🇼🇸 台湾节点"
@@ -679,8 +700,8 @@ proxy-groups:
   - name: "🍎 苹果服务"
     type: select
     proxies:
-    - "🏠 住宅出口"
     - "🎯 全球直连"
+    - "🏠 住宅出口"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
@@ -700,8 +721,8 @@ proxy-groups:
   - name: "Ⓜ️ 微软服务"
     type: select
     proxies:
-    - "🏠 住宅出口"
     - "🎯 全球直连"
+    - "🏠 住宅出口"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
@@ -721,8 +742,8 @@ proxy-groups:
   - name: "🎮 游戏平台"
     type: select
     proxies:
-    - "🏠 住宅出口"
     - "🎯 全球直连"
+    - "🏠 住宅出口"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
@@ -742,8 +763,8 @@ proxy-groups:
   - name: "🎮 Steam"
     type: select
     proxies:
-    - "🏠 住宅出口"
     - "🎯 全球直连"
+    - "🏠 住宅出口"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
@@ -767,8 +788,8 @@ proxy-groups:
   - name: "🐟 漏网之鱼"
     type: select
     proxies:
-    - "🏠 住宅出口"
     - "🇭🇰 香港节点"
+    - "🏠 住宅出口"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
     - "🇸🇬 新加坡节点"
@@ -935,6 +956,7 @@ rules:
 - "GEOSITE,category-public-tracker,🎯 全球直连"
 - "RULE-SET,NetworkCheck,🌐 网络检测"
 - "RULE-SET,OverseasGOV,🏛️ 海外政府"
+- "GEOSITE,telegram,📲 电报消息"
 - "GEOSITE,category-communication,💬 即时通讯"
 - "RULE-SET,Video-Pic-CDN,📡 社媒CDN"
 - "GEOSITE,category-social-media-!cn,🌐 社交媒体"
@@ -961,7 +983,7 @@ rules:
 - "GEOSITE,category-entertainment,🌎 国外媒体"
 - "GEOSITE,category-ecommerce,🛒 国外电商"
 - "GEOSITE,gfw,🚀 手动选择"
-- "GEOIP,telegram,💬 即时通讯,no-resolve"
+- "GEOIP,telegram,📲 电报消息,no-resolve"
 - "GEOIP,twitter,🌐 社交媒体,no-resolve"
 - "GEOIP,facebook,🌐 社交媒体,no-resolve"
 - "GEOIP,google,🇬 谷歌服务,no-resolve"
@@ -981,28 +1003,29 @@ rule-providers:
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml"
     proxy: DIRECT
 
-  Custom_Direct:
-    behavior: classical
-    interval: 10800
-    path: ./rule_provider/Custom_Direct_Classical.yaml
-    type: http
-    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical.yaml"
-    proxy: DIRECT
-
-  Custom_Proxy:
-    behavior: classical
-    interval: 10800
-    path: ./rule_provider/Custom_Proxy_Classical.yaml
-    type: http
-    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical.yaml"
-    proxy: DIRECT
-
   Steam_CDN:
     behavior: classical
     interval: 10800
     path: ./rule_provider/Steam_CDN_Classical.yaml
     type: http
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml"
+    proxy: DIRECT
+    
+  
+  Custom_Direct:
+    behavior: classical
+    interval: 28800
+    path: ./rule_provider/direct.yaml
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/direct.yaml"
+    proxy: DIRECT
+
+  Custom_Proxy:
+    behavior: classical
+    interval: 28800
+    path: ./rule_provider/proxy.yaml
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/proxy.yaml"
     proxy: DIRECT
     
   NetworkCheck:
