@@ -1,26 +1,6 @@
-# === 敏感信息（重要！不要提交！）===
-# 机场订阅链接
-subscription.txt
-subscription.yaml
-sub.txt
-*.subscription
-
-# 包含节点信息的完整配置
-config-with-nodes.yaml
-config-with-proxies.yaml
-nodes.yaml
-proxies.yaml
-
-# 自定义节点配置（包含真实 IP、用户名、密码）
-profiles/custom-nodes.yaml
-custom-nodes.yaml
-
-# 包含 Token 或密钥的文件
-*.token
-*.secret
-*.key
-*-secret.*
-*-token.*
+# ==========================================
+# ACL4ALL - Clash 规则配置项目
+# ==========================================
 
 # === 操作系统 ===
 # macOS
@@ -54,19 +34,21 @@ Desktop.ini
 # Vim
 *.swp
 *.swo
-*~
 
 # Emacs
-*~
 \#*\#
 .\#*
 
-# === 备份文件 ===
+# === 通用临时文件 ===
 *.bak
 *.backup
 *.old
 *.orig
 *.tmp
+temp/
+tmp/
+cache/
+.cache/
 
 # === 日志文件 ===
 *.log
@@ -75,22 +57,17 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# === 临时文件 ===
-temp/
-tmp/
-cache/
-.cache/
-
 # === 测试输出 ===
 test-output/
 coverage/
 
-# === Node.js ===
+# === 通用开发工具 ===
+# Node.js
 node_modules/
 package-lock.json
 yarn.lock
 
-# === Python ===
+# Python
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -98,12 +75,15 @@ __pycache__/
 venv/
 ENV/
 
-# === 个人笔记 ===
-notes.md
-TODO.md
-私人笔记.md
+# === 通用敏感文件模式 ===
+# 环境变量文件
+.env
+.env.*
+!.env.example
+.env.local
+.env.production
 
-# === 自动生成的文件 ===
-# YAML 规则文件由 GitHub Actions 自动生成
-# 如果不想在本地看到这些文件，可以添加到 .git/info/exclude
-# rulesets/**/*.yaml
+# 通用凭证文件
+credentials.*
+auth.*
+secrets.*
