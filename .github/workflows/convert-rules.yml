@@ -17,6 +17,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -31,3 +34,6 @@ jobs:
         with:
           commit_message: "chore: auto-convert LIST to YAML [skip ci]"
           file_pattern: "rulesets/**/*.yaml"
+          skip_fetch: false
+          skip_checkout: false
+          push_options: '--force-with-lease'
