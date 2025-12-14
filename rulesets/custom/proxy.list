@@ -7,6 +7,9 @@
 # DOMAIN-SUFFIX,example.com
 # DOMAIN-KEYWORD,keyword
 DOMAIN-SUFFIX,cdn.jsdelivr.net
+DOMAIN-SUFFIX,diabrowser.engineering
+DOMAIN-SUFFIX,unpkg.com
+
 
 
 # OneDrive 网页版
