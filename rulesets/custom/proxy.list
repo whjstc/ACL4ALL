@@ -9,8 +9,8 @@
 DOMAIN-SUFFIX,cdn.jsdelivr.net
 DOMAIN-SUFFIX,diabrowser.engineering
 DOMAIN-SUFFIX,unpkg.com
-
-
+# telegram
+IP-CIDR,5.28.195.2/32
 
 # OneDrive 网页版
 DOMAIN-SUFFIX,onedrive.live.com
