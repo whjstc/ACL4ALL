@@ -680,6 +680,7 @@ proxy-groups:
   - name: "🇬 谷歌服务"
     type: select
     proxies:
+    - "🏠 住宅出口"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
     - "🇯🇵 日本节点"
@@ -949,7 +950,7 @@ rules:
 - "GEOIP,private,🎯 全球直连,no-resolve"
 - "RULE-SET,Custom_Direct,🎯 全球直连"
 - "RULE-SET,Custom_Proxy,🚀 手动选择"
-- "GEOSITE,google-cn,🎯 全球直连"
+# - "GEOSITE,google-cn,🎯 全球直连"
 - "GEOSITE,category-games@cn,🎯 全球直连"
 - "RULE-SET,Steam_CDN,🎯 全球直连"
 - "GEOSITE,category-game-platforms-download,🎯 全球直连"
@@ -963,6 +964,7 @@ rules:
 - "GEOSITE,openai,🤖 ChatGPT"
 - "GEOSITE,bing,🤖 Copilot"
 - "GEOSITE,category-ai-!cn,🤖 AI服务"
+- "RULE-SET,Custom_AI,🤖 AI服务"
 - "GEOSITE,github,🚀 GitHub"
 - "GEOSITE,steam,🎮 Steam"
 - "GEOSITE,youtube,📹 YouTube"
@@ -1011,6 +1013,15 @@ rule-providers:
     url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml"
     proxy: DIRECT
     
+
+  Custom_AI:
+    behavior: classical
+    interval: 10800
+    path: ./rule_provider/CustomAI.yaml
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomAI.yaml"
+    proxy: DIRECT
+    
   
   Custom_Direct:
     behavior: classical
@@ -1051,4 +1062,4 @@ rule-providers:
     type: http
     url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/Video-Pic-CDN.yaml"
     proxy: DIRECT
-    
+
