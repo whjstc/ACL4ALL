@@ -309,6 +309,11 @@
       "name": "🐟 遵循规则",
       "type": "select",
       "filter": "[]🐟 漏网之鱼"
+    },
+    {
+      "name": "🎯 全球直连",
+      "type": "select",
+      "filter": "[]DIRECT"
     }
   ],
   "ruleProviders": {
