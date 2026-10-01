@@ -17,7 +17,7 @@
     {
       "name": "🗿 专属节点",
       "type": "url-test",
-      "filter": "(?i)(洛杉矶|新泽西|搬瓦工)",
+      "filter": "(?i)(^ZS-)",
       "url": "https://www.gstatic.com/generate_204",
       "interval": 300,
       "tolerance": 50,
