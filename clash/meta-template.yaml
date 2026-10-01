@@ -88,19 +88,12 @@ dns:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
 
-proxies:
-  - name: "🏠 住宅出口"
-    type: socks5
-    server: 127.0.0.1
-    port: 1080
-    # username: username
-    # password: password
-    dialer-proxy: "♻️ 自动选择"
+proxies: []
 
 proxy-providers:
   provider1:
     type: http
-    url: "url"
+    url: "http://192.168.1.20:3001/download/collection/链式精神?target=ClashMeta"
     interval: 3600
     path: ./proxy_provider/provider1.yaml
     proxy: DIRECT
@@ -111,7 +104,7 @@ proxy-providers:
 
     health-check:
       enable: true
-      interval: 600
+      interval: 300
       url: https://cp.cloudflare.com/generate_204
     override: # 覆写节点加载时的一些配置项
       skip-cert-verify: true
@@ -172,6 +165,15 @@ proxy-groups:
     interval: 300
     use:
       - provider1
+
+  - name: "🏠 住宅出口"
+    type: select
+    use:
+      - provider1
+    filter: "(?i)(住宅|ISP|Cliproxy)"
+    proxies:
+      - "🔗 链式中转"
+      - "DIRECT"
 
   - name: "🌐 网络检测"
     type: select
@@ -991,6 +993,9 @@ rules:
 - "GEOSITE,private,🎯 全球直连"
 - "GEOIP,private,🎯 全球直连,no-resolve"
 - "RULE-SET,Custom_Direct,🎯 全球直连"
+- "RULE-SET,CustomSocial,🌐 社交媒体"
+- "RULE-SET,Video-Pic-CDN,📡 社媒CDN"
+- "RULE-SET,Custom_AI,🤖 AI服务"
 - "RULE-SET,Custom_Proxy,🚀 手动选择"
 # - "GEOSITE,google-cn,🎯 全球直连"
 - "GEOSITE,category-games@cn,🎯 全球直连"
@@ -1001,12 +1006,10 @@ rules:
 - "RULE-SET,OverseasGOV,🏛️ 海外政府"
 - "GEOSITE,telegram,📲 电报消息"
 - "GEOSITE,category-communication,💬 即时通讯"
-- "RULE-SET,Video-Pic-CDN,📡 社媒CDN"
 - "GEOSITE,category-social-media-!cn,🌐 社交媒体"
 - "GEOSITE,openai,🤖 ChatGPT"
 - "GEOSITE,bing,🤖 Copilot"
 - "GEOSITE,category-ai-!cn,🤖 AI服务"
-- "RULE-SET,Custom_AI,🤖 AI服务"
 - "GEOSITE,github,🚀 GitHub"
 - "GEOSITE,steam,🎮 Steam"
 - "GEOSITE,youtube,📹 YouTube"
@@ -1103,5 +1106,13 @@ rule-providers:
     path: ./rule_provider/Video-Pic-CDN.yaml
     type: http
     url: "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/Video-Pic-CDN.yaml"
+    proxy: DIRECT
+
+  CustomSocial:
+    behavior: classical
+    interval: 28800
+    path: ./rule_provider/CustomSocial.yaml
+    type: http
+    url: "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomSocial.yaml"
     proxy: DIRECT
 
