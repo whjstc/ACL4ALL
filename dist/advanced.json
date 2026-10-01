@@ -35,7 +35,7 @@
     {
       "name": "🏠 住宅出口",
       "type": "select",
-      "filter": "[]🔗 链式中转`[]DIRECT"
+      "filter": "(?i)(住宅|ISP|Cliproxy)`[]🔗 链式中转`[]DIRECT"
     },
     {
       "name": "🇭🇰 香港节点",
