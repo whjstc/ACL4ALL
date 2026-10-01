@@ -71,11 +71,16 @@ sniffer:
 
 dns:
   enable: true
-  listen: 0.0.0.0:7874
-  ipv6: true
+  listen: 0.0.0.0:1053
+  ipv6: false
   default-nameserver:
-    - 114.114.114.114
-    - tls://223.5.5.5:853
+    - 218.85.157.99
+    - 119.29.29.29
+    - 8.8.8.8
+  proxy-server-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 8.8.8.8
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -83,10 +88,21 @@ dns:
     - localhost.ptlogin2.qq.com
     - geosite:cn
   fake-ip-filter-mode: blacklist
-  respect-rules: false
+  respect-rules: true
   nameserver:
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
+    - https://8.8.8.8/dns-query
+    - https://1.1.1.1/dns-query
+    - https://208.67.222.222/dns-query
+  fallback: []
+  nameserver-policy:
+    geosite:cn,private,google-cn,apple-cn,steam@cn,category-games@cn,microsoft@cn,microsoft,apple:
+      - 218.85.157.99
+      - https://223.5.5.5/dns-query
+      - https://doh.pub/dns-query
+    rule-set:Custom_Direct:
+      - 218.85.157.99
+      - https://223.5.5.5/dns-query
+      - https://doh.pub/dns-query
 
 proxies: []
 
@@ -120,6 +136,7 @@ proxy-groups:
     interval: 300
     proxies:
     - "🇭🇰 香港节点"
+    - "🗿 专属节点"
     - "🏠 住宅出口"
     - "♻️ 自动选择"
     - "🇺🇸 美国节点"
@@ -193,6 +210,7 @@ proxy-groups:
     type: select
     proxies:
     - "🏠 住宅出口"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "♻️ 自动选择"
     - "🇭🇰 香港节点"
@@ -216,6 +234,7 @@ proxy-groups:
     type: select
     proxies:
     - "🏠 住宅出口"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "♻️ 自动选择"
     - "🇭🇰 香港节点"
@@ -239,6 +258,7 @@ proxy-groups:
     type: select
     proxies:
     - "🇭🇰 香港节点"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "♻️ 自动选择"
@@ -262,6 +282,7 @@ proxy-groups:
     type: select
     proxies:
     - "🏠 住宅出口"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
@@ -286,6 +307,7 @@ proxy-groups:
     type: select
     proxies:
     - "🏠 住宅出口"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
@@ -382,6 +404,7 @@ proxy-groups:
     type: select
     proxies:
     - "🏠 住宅出口"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
@@ -406,6 +429,7 @@ proxy-groups:
     type: select
     proxies:
     - "🇭🇰 香港节点"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "♻️ 自动选择"
@@ -427,6 +451,7 @@ proxy-groups:
     type: select
     proxies:
     - "🏠 住宅出口"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "♻️ 自动选择"
     - "🇭🇰 香港节点"
@@ -448,6 +473,7 @@ proxy-groups:
     type: select
     proxies:
     - "🇼🇸 台湾节点"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "🇸🇬 新加坡节点"
@@ -469,6 +495,7 @@ proxy-groups:
     type: select
     proxies:
     - "🏠 住宅出口"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🇸🇬 新加坡节点"
     - "🇭🇰 香港节点"
@@ -493,6 +520,7 @@ proxy-groups:
     type: select
     proxies:
     - "🇼🇸 台湾节点"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "🇸🇬 新加坡节点"
@@ -517,6 +545,7 @@ proxy-groups:
     type: select
     proxies:
     - "🇼🇸 台湾节点"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "🇸🇬 新加坡节点"
@@ -541,6 +570,7 @@ proxy-groups:
     type: select
     proxies:
     - "🇼🇸 台湾节点"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "🇸🇬 新加坡节点"
@@ -565,6 +595,7 @@ proxy-groups:
     type: select
     proxies:
     - "🇼🇸 台湾节点"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "🇸🇬 新加坡节点"
@@ -589,6 +620,7 @@ proxy-groups:
     type: select
     proxies:
     - "🇼🇸 台湾节点"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "🇸🇬 新加坡节点"
@@ -613,6 +645,7 @@ proxy-groups:
     type: select
     proxies:
     - "🎯 全球直连"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🇭🇰 香港节点"
     - "🏠 住宅出口"
@@ -637,6 +670,7 @@ proxy-groups:
     type: select
     proxies:
     - "🇼🇸 台湾节点"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "🇭🇰 香港节点"
@@ -661,6 +695,7 @@ proxy-groups:
     type: select
     proxies:
     - "🇼🇸 台湾节点"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "♻️ 自动选择"
@@ -670,6 +705,7 @@ proxy-groups:
     type: select
     proxies:
     - "🏠 住宅出口"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🇭🇰 香港节点"
     - "🇸🇬 新加坡节点"
@@ -694,6 +730,7 @@ proxy-groups:
     type: select
     proxies:
     - "🏠 住宅出口"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
@@ -718,6 +755,7 @@ proxy-groups:
     type: select
     proxies:
     - "🏠 住宅出口"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
@@ -739,6 +777,7 @@ proxy-groups:
     type: select
     proxies:
     - "🏠 住宅出口"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🇭🇰 香港节点"
     - "🇺🇸 美国节点"
@@ -760,6 +799,7 @@ proxy-groups:
     type: select
     proxies:
     - "🎯 全球直连"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "🇭🇰 香港节点"
@@ -781,6 +821,7 @@ proxy-groups:
     type: select
     proxies:
     - "🎯 全球直连"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "🇭🇰 香港节点"
@@ -802,6 +843,7 @@ proxy-groups:
     type: select
     proxies:
     - "🎯 全球直连"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "🇭🇰 香港节点"
@@ -823,6 +865,7 @@ proxy-groups:
     type: select
     proxies:
     - "🎯 全球直连"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "🇭🇰 香港节点"
@@ -848,6 +891,7 @@ proxy-groups:
     type: select
     proxies:
     - "🇭🇰 香港节点"
+    - "🗿 专属节点"
     - "🚀 手动选择"
     - "🏠 住宅出口"
     - "🇺🇸 美国节点"
@@ -1017,6 +1061,8 @@ rules:
 - "GEOSITE,category-ai-!cn,🤖 AI服务"
 - "GEOSITE,github,🚀 GitHub"
 - "GEOSITE,steam,🎮 Steam"
+- "DOMAIN-SUFFIX,music.youtube.com,🎵 YouTube Music"
+- "DOMAIN-SUFFIX,youtubemusic.com,🎵 YouTube Music"
 - "GEOSITE,youtube,📹 YouTube"
 - "GEOSITE,apple-tvplus,🎥 AppleTV+"
 - "GEOSITE,apple,🍎 苹果服务"
