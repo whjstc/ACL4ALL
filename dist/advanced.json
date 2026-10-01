@@ -313,7 +313,7 @@
     {
       "name": "🎯 全球直连",
       "type": "select",
-      "filter": "[]DIRECT"
+      "filter": "[]DIRECT`[]🚀 手动选择"
     }
   ],
   "ruleProviders": {
