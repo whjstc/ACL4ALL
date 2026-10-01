@@ -10,10 +10,10 @@ tcp-concurrent: true
 unified-delay: true
 
 geox-url:
-  mmdb: https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/Country.mmdb
-  geoip: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat
-  geosite: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
-  asn: https://testingcf.jsdelivr.net/gh/xishang0128/geoip@release/GeoLite2-ASN.mmdb
+  mmdb: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb
+  geoip: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
+  geosite: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
+  asn: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb
 
 geo-auto-update: true # 是否自动更新 geodata
 geo-update-interval: 24 # 更新间隔，单位：小时
@@ -1044,7 +1044,7 @@ rule-providers:
     interval: 10800
     path: ./rule_provider/Custom_Port_Direct.yaml
     type: http
-    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml"
+    url: "https://cdn.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml"
     proxy: DIRECT
 
   Steam_CDN:
@@ -1052,7 +1052,7 @@ rule-providers:
     interval: 10800
     path: ./rule_provider/Steam_CDN_Classical.yaml
     type: http
-    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml"
+    url: "https://cdn.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml"
     proxy: DIRECT
     
 
@@ -1061,7 +1061,7 @@ rule-providers:
     interval: 10800
     path: ./rule_provider/CustomAI.yaml
     type: http
-    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomAI.yaml"
+    url: "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomAI.yaml"
     proxy: DIRECT
     
   
@@ -1070,7 +1070,7 @@ rule-providers:
     interval: 28800
     path: ./rule_provider/direct.yaml
     type: http
-    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/direct.yaml"
+    url: "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/direct.yaml"
     proxy: DIRECT
 
   Custom_Proxy:
@@ -1078,7 +1078,7 @@ rule-providers:
     interval: 28800
     path: ./rule_provider/proxy.yaml
     type: http
-    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/proxy.yaml"
+    url: "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/proxy.yaml"
     proxy: DIRECT
     
   NetworkCheck:
@@ -1086,7 +1086,7 @@ rule-providers:
     interval: 28800
     path: ./rule_provider/NetworkCheck.yaml
     type: http
-    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/NetworkCheck.yaml"
+    url: "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/NetworkCheck.yaml"
     proxy: DIRECT
     
   OverseasGOV:
@@ -1094,7 +1094,7 @@ rule-providers:
     interval: 28800
     path: ./rule_provider/OverseasGOV.yaml
     type: http
-    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/OverseasGOV.yaml"
+    url: "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/OverseasGOV.yaml"
     proxy: DIRECT
 
   Video-Pic-CDN:
@@ -1102,6 +1102,6 @@ rule-providers:
     interval: 28800
     path: ./rule_provider/Video-Pic-CDN.yaml
     type: http
-    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/Video-Pic-CDN.yaml"
+    url: "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/Video-Pic-CDN.yaml"
     proxy: DIRECT
 

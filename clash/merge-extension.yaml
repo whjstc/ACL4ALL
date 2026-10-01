@@ -16,35 +16,35 @@ rule-providers:
   custom-direct:
     type: http
     behavior: classical
-    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/direct.yaml"
+    url: "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/direct.yaml"
     path: ./ruleset/custom-direct.yaml
     interval: 86400
 
   custom-social:
     type: http
     behavior: classical
-    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomSocial.yaml"
+    url: "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomSocial.yaml"
     path: ./ruleset/custom-social.yaml
     interval: 86400
 
   custom-cdn:
     type: http
     behavior: classical
-    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/Video-Pic-CDN.yaml"
+    url: "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/Video-Pic-CDN.yaml"
     path: ./ruleset/custom-cdn.yaml
     interval: 86400
 
   custom-ai:
     type: http
     behavior: classical
-    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomAI.yaml"
+    url: "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomAI.yaml"
     path: ./ruleset/custom-ai.yaml
     interval: 86400
 
   custom-proxy:
     type: http
     behavior: classical
-    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/proxy.yaml"
+    url: "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/proxy.yaml"
     path: ./ruleset/custom-proxy.yaml
     interval: 86400
 

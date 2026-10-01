@@ -38,7 +38,7 @@ ACL4ALL/
 使用任意 Subconverter 服务，远程配置填写：
 
 ```
-https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/subconverter/advanced.ini
+https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/subconverter/advanced.ini
 ```
 
 ### 直接使用
@@ -78,10 +78,10 @@ https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/subconverter/advanced.ini
 
 - [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR) - 规则集参考
 - [Aethersailor/Custom_OpenClash_Rules](https://github.com/Aethersailor/Custom_OpenClash_Rules) - 配置灵感
-- [dl123100/clash-geosite](https://github.com/dl123100/clash-geosite) - Geosite 规则来源
+- [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) - 权威分流规则集
 - [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community) - 域名列表社区
 - [tindy2013/subconverter](https://github.com/tindy2013/subconverter) - 订阅转换工具
-- [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules) - 规则集参考
+- [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat) - 规则集参考
 
 ---
 

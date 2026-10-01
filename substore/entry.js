@@ -9,7 +9,7 @@ module.exports = async function (proxies, targetPlatform, args) {
 
     // 2. 配置 CDN 路径
     // ⚠️ 确保这里的地址是你自己的仓库
-    const CDN_ROOT = "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main";
+    const CDN_ROOT = "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main";
     const JSON_URL = `${CDN_ROOT}/dist/${configName}.json`;
 
     const LANDING_KEYWORD = "住宅落地";

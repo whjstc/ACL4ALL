@@ -29,7 +29,7 @@ IP-CIDR,192.168.0.0/16
 在 Subconverter 配置中引用：
 
 ```ini
-ruleset=🎯 全球直连,https://testingcf.jsdelivr.net/gh/你的用户名/ACL4ALL@main/rulesets/custom/direct.list
+ruleset=🎯 全球直连,https://cdn.jsdelivr.net/gh/你的用户名/ACL4ALL@main/rulesets/custom/direct.list
 ```
 
 ## ✏️ 自定义规则

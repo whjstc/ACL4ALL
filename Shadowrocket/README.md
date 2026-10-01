@@ -22,7 +22,7 @@ Shadowrocket/
 Shadowrocket → 配置 → 添加配置 → URL
 
 ```
-https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/Shadowrocket/config/lazy_group_4me.conf
+https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/Shadowrocket/config/lazy_group_4me.conf
 ```
 
 ### 导入模块

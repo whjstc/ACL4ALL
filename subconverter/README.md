@@ -15,7 +15,7 @@
 在 Subconverter 服务中使用远程配置：
 
 ```
-https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/subconverter/advanced.ini
+https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/subconverter/advanced.ini
 ```
 
 ## 🔧 自定义配置

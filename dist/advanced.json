@@ -316,90 +316,90 @@
     }
   ],
   "ruleProviders": {
-    "RP_37C9A512": {
+    "RP_41D59D8E": {
       "type": "http",
       "behavior": "classical",
-      "url": "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/direct.list,28800",
-      "path": "./ruleset/RP_37C9A512.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/direct.list,28800",
+      "path": "./ruleset/RP_41D59D8E.yaml",
       "interval": 86400
     },
-    "RP_49E8E6B2": {
+    "RP_C5846398": {
       "type": "http",
       "behavior": "classical",
-      "url": "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomSocial.list,28800",
-      "path": "./ruleset/RP_49E8E6B2.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomSocial.list,28800",
+      "path": "./ruleset/RP_C5846398.yaml",
       "interval": 86400
     },
-    "RP_59DF2EE2": {
+    "RP_48E0A1C3": {
       "type": "http",
       "behavior": "classical",
-      "url": "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/Video-Pic-CDN.list,28800",
-      "path": "./ruleset/RP_59DF2EE2.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/Video-Pic-CDN.list,28800",
+      "path": "./ruleset/RP_48E0A1C3.yaml",
       "interval": 86400
     },
-    "RP_4DD840A7": {
+    "RP_3E147260": {
       "type": "http",
       "behavior": "classical",
-      "url": "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomAI.list,10800",
-      "path": "./ruleset/RP_4DD840A7.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomAI.list,10800",
+      "path": "./ruleset/RP_3E147260.yaml",
       "interval": 86400
     },
-    "RP_253862E0": {
+    "RP_123BB9B6": {
       "type": "http",
       "behavior": "classical",
-      "url": "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/proxy.list,28800",
-      "path": "./ruleset/RP_253862E0.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/proxy.list,28800",
+      "path": "./ruleset/RP_123BB9B6.yaml",
       "interval": 86400
     },
-    "RP_32546DEE": {
+    "RP_33DDC4C6": {
       "type": "http",
       "behavior": "classical",
-      "url": "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/NetworkCheck.list,28800",
-      "path": "./ruleset/RP_32546DEE.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/NetworkCheck.list,28800",
+      "path": "./ruleset/RP_33DDC4C6.yaml",
       "interval": 86400
     },
-    "RP_2EB01BC8": {
+    "RP_16B3FEA9": {
       "type": "http",
       "behavior": "classical",
-      "url": "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/OverseasGOV.list,28800",
-      "path": "./ruleset/RP_2EB01BC8.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/OverseasGOV.list,28800",
+      "path": "./ruleset/RP_16B3FEA9.yaml",
       "interval": 86400
     },
-    "RP_D75BC1A9": {
+    "RP_F2A0861F": {
       "type": "http",
       "behavior": "classical",
-      "url": "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml,28800",
-      "path": "./ruleset/RP_D75BC1A9.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml,28800",
+      "path": "./ruleset/RP_F2A0861F.yaml",
       "interval": 86400
     },
-    "RP_9EF2F66F": {
+    "RP_E2525D39": {
       "type": "http",
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTubeMusic.list",
-      "path": "./ruleset/RP_9EF2F66F.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/YouTubeMusic.list",
+      "path": "./ruleset/RP_E2525D39.yaml",
       "interval": 86400
     },
-    "RP_D945FB0B": {
+    "RP_3B60317E": {
       "type": "http",
       "behavior": "classical",
-      "url": "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml,28800",
-      "path": "./ruleset/RP_D945FB0B.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml,28800",
+      "path": "./ruleset/RP_3B60317E.yaml",
       "interval": 86400
     }
   },
   "rules": [
-    "RULE-SET,RP_37C9A512,🎯 全球直连",
-    "RULE-SET,RP_49E8E6B2,🌐 社交媒体",
-    "RULE-SET,RP_59DF2EE2,📡 社媒CDN",
-    "RULE-SET,RP_4DD840A7,🤖 AI服务",
-    "RULE-SET,RP_253862E0,🚀 手动选择",
-    "RULE-SET,RP_32546DEE,🌐 网络检测",
-    "RULE-SET,RP_2EB01BC8,🏛️ 海外政府",
+    "RULE-SET,RP_41D59D8E,🎯 全球直连",
+    "RULE-SET,RP_C5846398,🌐 社交媒体",
+    "RULE-SET,RP_48E0A1C3,📡 社媒CDN",
+    "RULE-SET,RP_3E147260,🤖 AI服务",
+    "RULE-SET,RP_123BB9B6,🚀 手动选择",
+    "RULE-SET,RP_33DDC4C6,🌐 网络检测",
+    "RULE-SET,RP_16B3FEA9,🏛️ 海外政府",
     "GEOSITE,private,🎯 全球直连",
     "GEOIP,private,no-resolve,🎯 全球直连",
     "GEOSITE,google-cn,🎯 全球直连",
     "GEOSITE,category-games@cn,🎯 全球直连",
-    "RULE-SET,RP_D75BC1A9,🎯 全球直连",
+    "RULE-SET,RP_F2A0861F,🎯 全球直连",
     "GEOSITE,category-game-platforms-download,🎯 全球直连",
     "GEOSITE,category-public-tracker,🎯 全球直连",
     "GEOSITE,telegram,📲 电报消息",
@@ -410,7 +410,7 @@
     "GEOSITE,category-ai-!cn,🤖 AI服务",
     "GEOSITE,github,🚀 GitHub",
     "GEOSITE,steam,🎮 Steam",
-    "RULE-SET,RP_9EF2F66F,🎵 YouTube Music",
+    "RULE-SET,RP_E2525D39,🎵 YouTube Music",
     "GEOSITE,youtube,📹 YouTube",
     "GEOSITE,apple-tvplus,🎥 AppleTV+",
     "GEOSITE,apple,🍎 苹果服务",
@@ -436,7 +436,7 @@
     "GEOIP,netflix,no-resolve,🎥 Netflix",
     "GEOSITE,cn,🎯 全球直连",
     "GEOIP,cn,no-resolve,🎯 全球直连",
-    "RULE-SET,RP_D945FB0B,🔀 非标端口",
+    "RULE-SET,RP_3B60317E,🔀 非标端口",
     "MATCH,🐟 漏网之鱼"
   ]
 }
