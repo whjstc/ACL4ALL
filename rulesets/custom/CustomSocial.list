@@ -1,0 +1,43 @@
+# NAME: Custom Social Media & Account Auth
+# AUTHOR: whjstc
+# REPO: https://github.com/whjstc/ACL4ALL
+# UPDATED: 2026-10-01 23:10:00
+# DESC: Meta/Facebook/Instagram/LinkedIn 核心主站与鉴权风控域名（统一出口，杜绝异地登录判定）
+
+# > Meta / Facebook / Instagram / Threads / Messenger 核心主站与账号鉴权
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,facebook.net
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fb.me
+DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,fbsbx.net
+DOMAIN-SUFFIX,meta.com
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,metaaivm.com
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,instagr.am
+DOMAIN-SUFFIX,threads.net
+DOMAIN-SUFFIX,threads.com
+DOMAIN-SUFFIX,messenger.com
+DOMAIN-SUFFIX,m.me
+DOMAIN-SUFFIX,accountkit.com
+DOMAIN-SUFFIX,oculus.com
+
+# > LinkedIn 领英全域及安全风控（统一出口IP）
+DOMAIN-KEYWORD,linkedin
+DOMAIN-KEYWORD,licdn
+DOMAIN-SUFFIX,linkedin.com
+DOMAIN-SUFFIX,linkedin.cn
+DOMAIN-SUFFIX,licdn.com
+DOMAIN-SUFFIX,licdn.cn
+DOMAIN-SUFFIX,lnkd.in
+DOMAIN-SUFFIX,bizographics.com
+DOMAIN-SUFFIX,omtrdc.net
+DOMAIN-SUFFIX,singular.net
+DOMAIN-SUFFIX,ns1p.net
+DOMAIN-SUFFIX,protechts.net
+DOMAIN-KEYWORD,protechts
+DOMAIN-SUFFIX,demdex.net
+
+# > WhatsApp 进程
+PROCESS-NAME,WhatsApp

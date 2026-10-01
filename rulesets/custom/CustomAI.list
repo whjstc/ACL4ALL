@@ -1,0 +1,47 @@
+# NAME: Custom AI Services
+# AUTHOR: whjstc
+# REPO: https://github.com/whjstc/ACL4ALL
+# UPDATED: 2026-10-01 23:10:00
+# DESC: Custom AI service domains (Anthropic/Claude Code 逆向完备集合, OpenAI, Cursor, etc.)
+
+# > Anthropic / Claude / Claude Code (经由官方二进制 2.1.220 逆向全量验证)
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
+DOMAIN,servd-anthropic-website.b-cdn.net
+DOMAIN,cdn.usefathom.com
+
+# > Claude Code 遥测、灰度 A/B Testing 与错误日志监控 (防封号关键域名)
+DOMAIN-SUFFIX,growthbook.io
+DOMAIN-SUFFIX,statsigapi.net
+DOMAIN-SUFFIX,statsig.com
+DOMAIN-SUFFIX,datadoghq.com
+DOMAIN-SUFFIX,sentry.dev
+
+# > Cursor (Anysphere)
+DOMAIN-SUFFIX,cursorvm.com
+DOMAIN-SUFFIX,cursor.com
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,cursorapi.com
+DOMAIN-SUFFIX,cursor-cdn.com
+
+# > OpenAI & ChatGPT
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,revenuecat.com
+DOMAIN-SUFFIX,arkoselabs.com
+DOMAIN-SUFFIX,onetrust.com
+DOMAIN,challenges.cloudflare.com
+
+# > Other AI Services
+DOMAIN-SUFFIX,genspark.ai
+DOMAIN-SUFFIX,diabrowser.engineering
+DOMAIN-SUFFIX,coze.com
+DOMAIN-SUFFIX,huggingface.co

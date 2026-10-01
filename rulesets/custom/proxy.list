@@ -1,0 +1,41 @@
+# NAME: Custom Proxy Rules
+# AUTHOR: whjstc
+# REPO: https://github.com/whjstc/ACL4ALL
+# UPDATED: 2026-10-01 23:10:00
+# DESC: 补充代理规则，涵盖 Tailscale 控制面、海外支付风控、YouTube Music 与辅助工具
+
+# ========================================================
+# 1. Tailscale 控制面 (走代理保证连接成功率与秒级握手)
+# ========================================================
+DOMAIN-SUFFIX,tailscale.com
+
+# ========================================================
+# 2. 国际商业支付与风控 (统一出口防止支付拦截)
+# ========================================================
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,stripecdn.com
+DOMAIN-SUFFIX,stripe.network
+DOMAIN-SUFFIX,paypal.com
+DOMAIN-SUFFIX,paypalobjects.com
+
+# ========================================================
+# 3. YouTube Music
+# ========================================================
+DOMAIN-SUFFIX,music.youtube.com
+DOMAIN-SUFFIX,youtubemusic.com
+
+# ========================================================
+# 4. IP 归属与合规探测
+# ========================================================
+DOMAIN-SUFFIX,ipinfo.io
+DOMAIN,geolocation.onetrust.com
+DOMAIN-SUFFIX,cookielaw.org
+
+# ========================================================
+# 5. 常用公共服务与开发镜像
+# ========================================================
+DOMAIN-SUFFIX,cdn.jsdelivr.net
+DOMAIN-SUFFIX,unpkg.com
+DOMAIN-SUFFIX,onedrive.live.com
+DOMAIN-SUFFIX,mirrors.utermux.dev
+IP-CIDR,5.28.195.2/32,no-resolve

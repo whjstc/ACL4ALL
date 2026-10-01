@@ -1,0 +1,62 @@
+# ==============================================================================
+# ACL4ALL - Clash Verge Rev 专属 Merge 配置扩展
+# 用途：在订阅更新时自动追加顶级分流规则与 DNS 覆盖，彻底解决订阅更新覆盖自定义规则的痛点
+# 适用平台：macOS / Windows / Linux (Clash Verge Rev)
+# ==============================================================================
+
+# 1. 域名定向 DNS 策略 (彻底切断 ECS 泄露通道，加速 Tailscale 握手)
+dns:
+  nameserver-policy:
+    "+.tailscale.com":
+      - 223.5.5.5
+      - 119.29.29.29
+
+# 2. 外部规则集声明 (从 ACL4ALL 自动拉取更新)
+rule-providers:
+  custom-direct:
+    type: http
+    behavior: classical
+    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/direct.yaml"
+    path: ./ruleset/custom-direct.yaml
+    interval: 86400
+
+  custom-social:
+    type: http
+    behavior: classical
+    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomSocial.yaml"
+    path: ./ruleset/custom-social.yaml
+    interval: 86400
+
+  custom-cdn:
+    type: http
+    behavior: classical
+    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/Video-Pic-CDN.yaml"
+    path: ./ruleset/custom-cdn.yaml
+    interval: 86400
+
+  custom-ai:
+    type: http
+    behavior: classical
+    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomAI.yaml"
+    path: ./ruleset/custom-ai.yaml
+    interval: 86400
+
+  custom-proxy:
+    type: http
+    behavior: classical
+    url: "https://testingcf.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/proxy.yaml"
+    path: ./ruleset/custom-proxy.yaml
+    interval: 86400
+
+# 3. 优先注入规则最顶层 (Prepend Rules)
+prepend-rules:
+  # 最高优先级：Tailscale P2P 打洞与本地直连
+  - RULE-SET,custom-direct,DIRECT
+  # 社交媒体主站与鉴权：强制走统一出口 (住宅代理/社交媒体)
+  - RULE-SET,custom-social,🌐 社交媒体
+  # 媒体 CDN 动静分离：走社媒CDN或普通节点，节省住宅流量
+  - RULE-SET,custom-cdn,📡 社媒CDN
+  # AI 服务全链路防封：统一走 AI 住宅出口
+  - RULE-SET,custom-ai,🤖 AI服务
+  # 特殊代理服务 (Tailscale 控制面等)
+  - RULE-SET,custom-proxy,🚀 手动选择

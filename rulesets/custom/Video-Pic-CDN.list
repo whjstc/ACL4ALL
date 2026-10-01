@@ -1,0 +1,41 @@
+# NAME: Video-Pic-CDN
+# AUTHOR: whjstc
+# REPO: https://github.com/whjstc/ACL4ALL
+# UPDATED: 2026-10-01 23:10:00
+# DESC: 社交媒体与流媒体图片、视频静态 CDN（动静分离专用）
+
+# > Meta / Facebook / Instagram 媒体 CDN（走社媒CDN/普通节点，节省昂贵住宅流量）
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,fbcdn.com
+DOMAIN-SUFFIX,fbcdn.xyz
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,fna.fbcdn.net
+DOMAIN-SUFFIX,fbstatic-a.akamaihd.net
+
+# > Twitter/X (图片/视频)
+DOMAIN-SUFFIX,twimg.com
+DOMAIN-SUFFIX,pbs.twimg.com
+DOMAIN-SUFFIX,cdn.syndication.twimg.com
+DOMAIN-SUFFIX,video.twimg.com
+
+# > YouTube (视频/缩略图)
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,ytimg.com
+
+# > Snapchat (图片/视频)
+DOMAIN-SUFFIX,sc-cdn.net
+
+# > Pinterest (图片/视频)
+DOMAIN-SUFFIX,pinimg.com
+DOMAIN-SUFFIX,i.pinimg.com
+DOMAIN-SUFFIX,s.pinimg.com
+
+# > Reddit (图片/视频)
+DOMAIN-SUFFIX,redd.it
+DOMAIN-SUFFIX,i.redd.it
+DOMAIN-SUFFIX,redditmedia.com
+DOMAIN-SUFFIX,redditstatic.com
+
+# > Twitch (视频)
+DOMAIN-SUFFIX,ttvnw.net
