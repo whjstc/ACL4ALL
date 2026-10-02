@@ -8,7 +8,7 @@
 Shadowrocket/
 ├── config/          # 配置文件
 │   ├── lazy_group.conf        # 基础版
-│   └── lazy_group_4me.conf    # 定制版
+│   └── ACL4ALL_Advanced.conf  # 进阶定制版
 ├── modules/         # .sgmodule 模块
 │   └── VVeboFix4Shadowrocket.sgmodule
 └── scripts/         # 脚本
@@ -22,7 +22,7 @@ Shadowrocket/
 Shadowrocket → 配置 → 添加配置 → URL
 
 ```
-https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/Shadowrocket/config/lazy_group_4me.conf
+https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/Shadowrocket/config/ACL4ALL_Advanced.conf
 ```
 
 ### 导入模块
