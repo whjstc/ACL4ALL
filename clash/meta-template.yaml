@@ -773,7 +773,7 @@ proxy-groups:
     - "♻️ 自动选择"
     - "🎯 全球直连"
 
-  - name: "🇬 谷歌服务"
+  - name: "🔍 谷歌服务"
     type: select
     proxies:
     - "🏠 住宅出口"
@@ -1068,7 +1068,7 @@ rules:
 - "GEOSITE,apple,🍎 苹果服务"
 - "GEOSITE,microsoft,Ⓜ️ 微软服务"
 - "GEOSITE,googlefcm,📢 谷歌FCM"
-- "GEOSITE,google,🇬 谷歌服务"
+- "GEOSITE,google,🔍 谷歌服务"
 - "GEOSITE,tiktok,🎶 TikTok"
 - "GEOSITE,netflix,🎥 Netflix"
 - "GEOSITE,disney,🎥 DisneyPlus"
@@ -1084,7 +1084,7 @@ rules:
 - "GEOIP,telegram,📲 电报消息,no-resolve"
 - "GEOIP,twitter,🌐 社交媒体,no-resolve"
 - "GEOIP,facebook,🌐 社交媒体,no-resolve"
-- "GEOIP,google,🇬 谷歌服务,no-resolve"
+- "GEOIP,google,🔍 谷歌服务,no-resolve"
 - "GEOIP,netflix,🎥 Netflix,no-resolve"
 - "GEOSITE,cn,🎯 全球直连"
 - "GEOIP,cn,🎯 全球直连,no-resolve"

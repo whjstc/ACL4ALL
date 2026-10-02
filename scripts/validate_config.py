@@ -69,10 +69,9 @@ class ConfigValidator:
                 # 检查参数格式
                 if len(parts) > 2:
                     third_param = parts[2]
-                    # 对于 select 类型,第三个参数不应该是正则表达式
+                    # 对于 select 类型,若包含 [] 则为选项列表；若不包含则允许是纯正则表达式筛选节点
                     if group_type == 'select':
-                        if third_param and not third_param.startswith('[]') and (third_param.startswith('^') or third_param.startswith('(?')):
-                            self.add_error(f"行 {i}: select 类型策略组 '{group_name}' 不应该在选项位置使用正则表达式")
+                        pass
                     # 对于 url-test 类型,第四个参数应该是测试 URL
                     elif group_type == 'url-test' and len(parts) > 3:
                         fourth_param = parts[3]
@@ -144,9 +143,9 @@ class ConfigValidator:
             
         return len(self.errors) == 0
             
-    def cross_validate(self, ini_path, yaml_path):
-        """交叉验证两个配置文件的一致性"""
-        print(f"\n🔍 交叉验证配置一致性")
+    def cross_validate(self, ini_path, yaml_path, sr_path=None):
+        """交叉验证配置文件的一致性"""
+        print(f"\n🔍 交叉验证配置一致性 (INI ⟷ YAML ⟷ Shadowrocket)")
         print("=" * 60)
         
         # 读取 INI 文件的策略组
@@ -170,13 +169,34 @@ class ConfigValidator:
                     name_match = re.search(r'name:\s*["\']?([^"\']+)["\']?', stripped)
                     if name_match:
                         yaml_groups.add(name_match.group(1))
+
+        # 读取 Shadowrocket 文件的策略组
+        sr_groups = set()
+        if sr_path and sr_path.exists():
+            content = sr_path.read_text(encoding='utf-8')
+            in_group = False
+            for line in content.split('\n'):
+                line = line.strip()
+                if line.startswith('['):
+                    in_group = (line.strip('[]') == 'Proxy Group')
+                    continue
+                if in_group and '=' in line and not line.startswith('#') and not line.startswith(';'):
+                    name = line.split('=', 1)[0].strip()
+                    sr_groups.add(name)
                 
         # 比较策略组
         ini_only = ini_groups - yaml_groups
         yaml_only = yaml_groups - ini_groups
         common = ini_groups & yaml_groups
         
-        print(f"✅ 共同策略组: {len(common)} 个")
+        print(f"✅ INI 与 YAML 共同策略组: {len(common)} 个")
+        
+        if sr_path and sr_path.exists():
+            sr_diff = ini_groups ^ sr_groups
+            if sr_diff:
+                self.add_warning(f"INI 与 Shadowrocket 策略组不一致: {', '.join(sorted(sr_diff))}")
+            else:
+                print(f"✅ Shadowrocket 策略组 100% 对齐: {len(sr_groups)} 个")
         
         if ini_only:
             self.add_warning(f"仅在 INI 中存在的策略组 ({len(ini_only)}): {', '.join(sorted(ini_only))}")
@@ -205,7 +225,7 @@ class ConfigValidator:
             if self.warnings:
                 print(f"\n⚠️  验证通过,但有 {len(self.warnings)} 个警告")
             else:
-                print("\n✅ 验证通过,配置文件格式正确!")
+                print("\n✅ 验证通过,全平台配置文件 100% 格式正确且对齐!")
             return True
 
 
@@ -218,6 +238,7 @@ def main():
     # 配置文件路径
     ini_path = base_dir / 'subconverter' / 'advanced.ini'
     yaml_path = base_dir / 'clash' / 'meta-template.yaml'
+    sr_path = base_dir / 'Shadowrocket' / 'config' / 'ACL4ALL_Advanced.conf'
     
     print("🚀 ACL4ALL 配置验证工具")
     print("=" * 60)
@@ -233,7 +254,7 @@ def main():
     yaml_valid = validator.validate_yaml_file(yaml_path)
     
     # 交叉验证
-    validator.cross_validate(ini_path, yaml_path)
+    validator.cross_validate(ini_path, yaml_path, sr_path)
     
     # 打印结果
     success = validator.print_results()

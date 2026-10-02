@@ -95,3 +95,6 @@ clash/clashverge.yaml
 clashverge.yaml*
 *.secret.yaml
 *.local.yaml
+clash/*.dat
+clash/*.db
+

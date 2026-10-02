@@ -271,9 +271,9 @@
       "filter": "[]🏠 住宅出口`[]🚀 手动选择`[]🗿 专属节点`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🌐 其他地区`[]♻️ 自动选择`[]🎯 全球直连"
     },
     {
-      "name": "🇬 谷歌服务",
+      "name": "🔍 谷歌服务",
       "type": "select",
-      "filter": "[]🗿 专属节点`[]🚀 手动选择`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🌐 其他地区`[]♻️ 自动选择`[]🎯 全球直连"
+      "filter": "[]🏠 住宅出口`[]🗿 专属节点`[]🚀 手动选择`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🌐 其他地区`[]♻️ 自动选择`[]🎯 全球直连"
     },
     {
       "name": "🍎 苹果服务",
@@ -417,7 +417,7 @@
     "GEOSITE,apple,🍎 苹果服务",
     "GEOSITE,microsoft,Ⓜ️ 微软服务",
     "GEOSITE,googlefcm,📢 谷歌FCM",
-    "GEOSITE,google,🇬 谷歌服务",
+    "GEOSITE,google,🔍 谷歌服务",
     "GEOSITE,tiktok,🎶 TikTok",
     "GEOSITE,netflix,🎥 Netflix",
     "GEOSITE,disney,🎥 DisneyPlus",
@@ -433,7 +433,7 @@
     "GEOIP,telegram,no-resolve,📲 电报消息",
     "GEOIP,twitter,no-resolve,🌐 社交媒体",
     "GEOIP,facebook,no-resolve,🌐 社交媒体",
-    "GEOIP,google,no-resolve,🇬 谷歌服务",
+    "GEOIP,google,no-resolve,🔍 谷歌服务",
     "GEOIP,netflix,no-resolve,🎥 Netflix",
     "GEOSITE,cn,🎯 全球直连",
     "GEOIP,cn,no-resolve,🎯 全球直连",
