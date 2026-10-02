@@ -980,6 +980,7 @@ rules:
 - RULE-SET,Custom_Direct,🎯 全球直连
 - RULE-SET,CustomSocial,🌐 社交媒体
 - RULE-SET,Video-Pic-CDN,📡 社媒CDN
+- GEOSITE,cloudflare,📡 社媒CDN
 - RULE-SET,Custom_AI,🤖 AI服务
 - RULE-SET,Custom_Proxy,🚀 手动选择
 - GEOSITE,category-games@cn,🎯 全球直连

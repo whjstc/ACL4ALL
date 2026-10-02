@@ -76,6 +76,9 @@ GEOSITE_MAP = {
     "category-public-tracker": [
         f"RULE-SET,{BM7_PREFIX}/PrivateTracker/PrivateTracker.list,{{target}}"
     ],
+    "cloudflare": [
+        f"RULE-SET,{BM7_PREFIX}/Cloudflare/Cloudflare.list,{{target}}"
+    ],
     "telegram": [
         f"RULE-SET,{BM7_PREFIX}/Telegram/Telegram.list,{{target}}"
     ],
