@@ -100,7 +100,8 @@ proxies: []
 proxy-providers:
   provider1:
     type: http
-    url: http://192.168.1.20:3001/download/collection/链式精神?target=ClashMeta
+    # 请在此处填入您的机场订阅链接、自建节点池链接或 Sub-Store 导出链接
+    url: "https://your-subscription-url-here"
     interval: 3600
     path: ./proxy_provider/provider1.yaml
     proxy: DIRECT
