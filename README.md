@@ -26,22 +26,22 @@
 ## 🔄 自动化工作流与数据流向
 
 ```mermaid
-flowchart TD
-    subgraph S1["单一真理源 (SSOT)"]
-        INI["subconverter/advanced.ini<br>（仅维护此文件）"]
-        LIST["rulesets/custom/*.list<br>（自定义规则集）"]
+graph TD
+    subgraph SSOT["单一真理源 (SSOT)"]
+        INI["subconverter/advanced.ini\n(分流规则与策略组唯一源头)"]
+        LIST["rulesets/custom/*.list\n(自定义直连/AI/社媒规则)"]
     end
 
-    subgraph S2["GitHub Actions CI/CD 流水线"]
-        ACT1["auto-convert-shadowrocket.yml<br>➔ 编译 Shadowrocket 配置"]
-        ACT2["convert-rules.yml<br>➔ 转换 LIST 规则为 YAML"]
-        ACT3["build.yml<br>➔ 编译通用 JSON 产物"]
+    subgraph CI["GitHub Actions 自动化流水线"]
+        ACT1["auto-convert-shadowrocket.yml\n自动编译 Shadowrocket 配置"]
+        ACT2["convert-rules.yml\n自动转换 LIST 规则为 YAML"]
+        ACT3["build.yml\n自动生成通用 JSON 配置"]
     end
 
-    subgraph S3["全生态客户端消费"]
-        SR["📱 iOS Shadowrocket<br><b>ACL4ALL_Advanced.conf</b>"]
-        CLASH["💻 OpenClash / CMFA<br><b>meta-template.yaml</b>"]
-        SUB["⚙️ Subconverter / Sub-Store<br><b>订阅转换服务</b>"]
+    subgraph Clients["全生态多端消费"]
+        SR["iOS Shadowrocket\nACL4ALL_Advanced.conf"]
+        CLASH["OpenClash / CMFA\nmeta-template.yaml"]
+        SUB["Subconverter / Sub-Store\n在线订阅转换服务"]
     end
 
     INI -->|git push| ACT1
@@ -65,8 +65,12 @@ flowchart TD
 https://raw.githubusercontent.com/whjstc/ACL4ALL/main/Shadowrocket/config/ACL4ALL_Advanced.conf
 ```
 
-> **私有 CA 证书与家庭 DNS 解耦**：
-> 如需启用 HTTPS 解密或家庭特定 DNS，请使用独立的本地模块（`.sgmodule`）进行补充，与公网订阅配置解耦，保证更新不冲刷本地私有设置。
+> 💡 **关于 `.sgmodule`（Shadowrocket 专属私有模块）：**
+> * `.sgmodule` 是 Shadowrocket（及 Surge）特有的模块扩展机制。
+> * **为什么需要它？**
+>   因为本仓库是公开的，主配置文件只包含公共通用的分流规则与策略组，**严禁存放您的个人私有凭据**（如本机的 HTTPS 解密 CA 私钥、家庭局域网特定的 DNS 劫持映射等）。
+> * **端云解耦最佳实践：**
+>   将您的私有凭据保存在本地的 `iPhone_Private.sgmodule` 模块中，在 Shadowrocket 的「模块」页面开启。它会像插件一样无缝叠加在主配置上生效。这样无论主配置如何从 GitHub 在线自动更新，您的**本地私有证书与家庭 Wi-Fi DNS 映射永不丢失、永不泄露**！
 
 ### 2. Subconverter (订阅转换)
 
@@ -110,13 +114,13 @@ ACL4ALL/
 │   └── build.yml               # INI ➔ JSON 自动编译
 │
 ├── subconverter/               # 唯一真理源 (SSOT)
-│   ├── advanced.ini            # 进阶进阶全生态分流主模板
+│   ├── advanced.ini            # 进阶全生态分流主模板
 │   └── basic.ini               # 极简备用模板
 │
 ├── Shadowrocket/               # Shadowrocket 产物库
 │   ├── config/
 │   │   └── ACL4ALL_Advanced.conf # 自动生成的进阶配置文件
-│   ├── modules/                # 扩展模块
+│   ├── modules/                # Shadowrocket 专有模块 (.sgmodule)
 │   └── scripts/                # 专用重写脚本
 │
 ├── clash/                      # Clash Meta / Mihomo 体系
