@@ -234,8 +234,16 @@ def generate_sr_groups(groups):
             # url-test: name`url-test`filter`url`interval`tolerance
             filt = params[0] if len(params) > 0 else ""
             test_url = params[1] if len(params) > 1 and params[1] else "http://www.gstatic.com/generate_204"
-            interval = params[2] if len(params) > 2 and params[2] else "300"
-            tolerance = params[3] if len(params) > 3 and params[3] else "50"
+            interval = "300"
+            tolerance = "50"
+            if len(params) > 2:
+                sub_parts = [p.strip() for p in params[2].split(",") if p.strip()]
+                if len(sub_parts) >= 1:
+                    interval = sub_parts[0]
+                if len(sub_parts) >= 2:
+                    tolerance = sub_parts[1]
+                elif len(params) > 3 and params[3]:
+                    tolerance = params[3]
             line = f"{gname} = url-test,url={test_url},interval={interval},tolerance={tolerance},timeout=5,policy-regex-filter={filt}"
 
         elif gtype == "select":
