@@ -175,7 +175,10 @@ GEOSITE_MAP = {
         f"RULE-SET,{BM7_PREFIX}/Global/Global.list,{{target}}"
     ],
     "cn": [
-        f"RULE-SET,{BM7_PREFIX}/ChinaMax/ChinaMax.list,{{target}}"
+        "RULE-SET,https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaDomain.list,{target}",
+        "RULE-SET,https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaCompanyIp.list,{target}",
+        "DOMAIN-SUFFIX,cn,{target}",
+        f"RULE-SET,{BM7_PREFIX}/China/China.list,{{target}}"
     ]
 }
 
@@ -332,9 +335,21 @@ def generate_sr_rules(rulesets):
         # 5. GEOIP 规则转换
         elif rdef.startswith("[]GEOIP,"):
             parts = rdef[len("[]GEOIP,") :].split(",")
-            code = parts[0].strip().upper() if parts[0].strip().lower() == "cn" else parts[0].strip().lower()
-            no_resolve = ",no-resolve" if "no-resolve" in rdef else ""
-            sr_rule_lines.append(f"GEOIP,{code},{target}{no_resolve}")
+            raw_code = parts[0].strip()
+            # 在 Shadowrocket 中，GEOIP 仅支持 ISO 两位国家代码 (如 CN, US, JP)
+            # 对于 Clash Meta 私有的扩展标签 (如 telegram, twitter, google, netflix)，Shadowrocket 的 GeoLite2 并不支持国家匹配
+            if raw_code.lower() == "cn":
+                # 极其关键：Shadowrocket 作为 TUN 代理，底部的 GEOIP CN 判定绝不能加 no-resolve！
+                # 否则遇到未被静态规则收录的国内域名请求时，Shadowrocket 会因为 no-resolve 拒绝发起本地 DNS 查询，
+                # 导致无法获取目标 IP 进而跳过直连规则，错误跌入 FINAL 代理！
+                sr_rule_lines.append(f"GEOIP,CN,{target}")
+            elif len(raw_code) == 2 and raw_code.isalpha():
+                # 标准两位国家代码
+                no_resolve = ",no-resolve" if "no-resolve" in rdef else ""
+                sr_rule_lines.append(f"GEOIP,{raw_code.upper()},{target}{no_resolve}")
+            else:
+                # 非国家代码的 GEOIP (例如 telegram, twitter 等已在前面由专用 DOMAIN/IP-CIDR 规则集覆盖，Shadowrocket 不支持此类 GEOIP)
+                pass
 
         # 6. FINAL 兜底
         elif rdef.startswith("[]FINAL"):
