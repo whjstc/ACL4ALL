@@ -85,7 +85,14 @@ GEOSITE_MAP = {
     "category-communication": [
         f"RULE-SET,{BM7_PREFIX}/Whatsapp/Whatsapp.list,{{target}}",
         f"RULE-SET,{BM7_PREFIX}/Line/Line.list,{{target}}",
-        f"RULE-SET,{BM7_PREFIX}/Signal/Signal.list,{{target}}"
+        "DOMAIN-SUFFIX,signal.org,{target}",
+        "DOMAIN-SUFFIX,signal.me,{target}",
+        "DOMAIN-SUFFIX,signal.group,{target}",
+        "DOMAIN-SUFFIX,signal.link,{target}",
+        "DOMAIN-SUFFIX,signal.tube,{target}",
+        "DOMAIN-SUFFIX,signal.art,{target}",
+        "DOMAIN-SUFFIX,signalusers.org,{target}",
+        "DOMAIN-SUFFIX,whispersystems.org,{target}"
     ],
     "category-social-media-!cn": [
         f"RULE-SET,{BM7_PREFIX}/Twitter/Twitter.list,{{target}}",
