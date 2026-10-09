@@ -982,6 +982,7 @@ rules:
 - RULE-SET,CustomSocial,🌐 社交媒体
 - RULE-SET,Video-Pic-CDN,📡 社媒CDN
 - GEOSITE,cloudflare,📡 社媒CDN
+- DOMAIN,geolocation.onetrust.com,🚀 手动选择
 - RULE-SET,Custom_AI,🤖 AI服务
 - RULE-SET,Custom_Proxy,🚀 手动选择
 - GEOSITE,category-games@cn,🎯 全球直连
