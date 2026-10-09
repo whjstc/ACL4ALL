@@ -393,6 +393,7 @@
     "RULE-SET,RP_C5846398,🌐 社交媒体",
     "RULE-SET,RP_48E0A1C3,📡 社媒CDN",
     "GEOSITE,cloudflare,📡 社媒CDN",
+    "DOMAIN,geolocation.onetrust.com,🚀 手动选择",
     "RULE-SET,RP_3E147260,🤖 AI服务",
     "RULE-SET,RP_123BB9B6,🚀 手动选择",
     "RULE-SET,RP_33DDC4C6,🌐 网络检测",
