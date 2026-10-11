@@ -177,6 +177,9 @@ GEOSITE_MAP = {
     "category-entertainment": [
         f"RULE-SET,{BM7_PREFIX}/GlobalMedia/GlobalMedia.list,{{target}}"
     ],
+    "category-cryptocurrency": [
+        f"RULE-SET,{BM7_PREFIX}/Cryptocurrency/Cryptocurrency.list,{{target}}"
+    ],
     "category-ecommerce": [
         f"RULE-SET,{BM7_PREFIX}/Amazon/Amazon.list,{{target}}",
         f"RULE-SET,{BM7_PREFIX}/PayPal/PayPal.list,{{target}}"

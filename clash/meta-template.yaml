@@ -682,6 +682,44 @@ proxy-groups:
   - ♻️ 自动选择
   - 🎯 全球直连
   filter: ^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$
+- name: 💳 境外金融
+  type: select
+  proxies:
+  - 🏠 住宅出口
+  - 🗿 专属节点
+  - 🚀 手动选择
+  - 🇺🇸 美国节点
+  - 🇬🇧 英国节点
+  - 🇸🇬 新加坡节点
+  - 🇭🇰 香港节点
+  - 🇯🇵 日本节点
+  - 🇼🇸 台湾节点
+  - 🇩🇪 德国节点
+  - 🇫🇷 法国节点
+  - ♻️ 自动选择
+  - 🎯 全球直连
+  filter: ^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$
+  use:
+  - provider1
+- name: 🪙 加密货币
+  type: select
+  proxies:
+  - 🇸🇬 新加坡节点
+  - 🇼🇸 台湾节点
+  - 🇯🇵 日本节点
+  - 🗿 专属节点
+  - 🏠 住宅出口
+  - 🚀 手动选择
+  - 🇭🇰 香港节点
+  - 🇺🇸 美国节点
+  - 🇰🇷 韩国节点
+  - 🇨🇦 加拿大节点
+  - 🇬🇧 英国节点
+  - 🇩🇪 德国节点
+  - 🌐 其他地区
+  - ♻️ 自动选择
+  - 🎯 全球直连
+  filter: ^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$
   use:
   - provider1
 - name: 🛒 国外电商
@@ -979,9 +1017,10 @@ rules:
 - GEOSITE,private,🎯 全球直连
 - GEOIP,private,🎯 全球直连,no-resolve
 - RULE-SET,Custom_Direct,🎯 全球直连
+- RULE-SET,Custom_Finance,💳 境外金融
+- RULE-SET,Custom_Crypto,🪙 加密货币
 - RULE-SET,CustomSocial,🌐 社交媒体
 - RULE-SET,Video-Pic-CDN,📡 社媒CDN
-- GEOSITE,cloudflare,📡 社媒CDN
 - DOMAIN,geolocation.onetrust.com,🚀 手动选择
 - RULE-SET,Custom_AI,🤖 AI服务
 - RULE-SET,Custom_Proxy,🚀 手动选择
@@ -1017,6 +1056,7 @@ rules:
 - GEOSITE,bahamut,📺 Bahamut
 - GEOSITE,category-games,🎮 游戏平台
 - GEOSITE,category-entertainment,🌎 国外媒体
+- GEOSITE,category-cryptocurrency,🪙 加密货币
 - GEOSITE,category-ecommerce,🛒 国外电商
 - GEOSITE,gfw,🚀 手动选择
 - GEOIP,telegram,📲 电报消息,no-resolve
@@ -1049,6 +1089,20 @@ rule-providers:
     path: ./rule_provider/CustomAI.yaml
     type: http
     url: https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomAI.yaml
+    proxy: DIRECT
+  Custom_Finance:
+    behavior: classical
+    interval: 28800
+    path: ./rule_provider/finance.yaml
+    type: http
+    url: https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/finance.yaml
+    proxy: DIRECT
+  Custom_Crypto:
+    behavior: classical
+    interval: 28800
+    path: ./rule_provider/crypto.yaml
+    type: http
+    url: https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/crypto.yaml
     proxy: DIRECT
   Custom_Direct:
     behavior: classical

@@ -1,0 +1,28 @@
+# NAME: Overseas Finance & Payment
+# AUTHOR: whjstc
+# REPO: https://github.com/whjstc/ACL4ALL
+# UPDATED: 2026-10-11 16:40:00
+# DESC: 境外敏感金融、国际汇款与支付网关（建议锁定住宅出口/独立专属节点以防封号风控）
+
+# > Wise (TransferWise)
+DOMAIN-SUFFIX,wise.com
+DOMAIN-SUFFIX,transferwise.com
+
+# > Stripe (支付网关与商家结算)
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,stripe.network
+
+# > Revolut
+DOMAIN-SUFFIX,revolut.com
+DOMAIN-SUFFIX,revolut.me
+
+# > PayPal 金融风控相关
+DOMAIN-SUFFIX,paypal.com
+DOMAIN-SUFFIX,paypalobjects.com
+
+# > 其他知名跨境金融/借记卡
+DOMAIN-SUFFIX,payoneer.com
+DOMAIN-SUFFIX,dupay.one
+DOMAIN-SUFFIX,onekey.so
+DOMAIN-SUFFIX,depay.one
+DOMAIN-SUFFIX,ifastgb.com

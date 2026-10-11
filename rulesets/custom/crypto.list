@@ -1,0 +1,59 @@
+# NAME: Cryptocurrency & Exchanges
+# AUTHOR: whjstc
+# REPO: https://github.com/whjstc/ACL4ALL
+# UPDATED: 2026-10-11 16:40:00
+# DESC: 主流数字货币交易所、行情与 Web3 平台（建议避开香港/美国等合规受限节点）
+
+# > Binance (币安)
+DOMAIN-SUFFIX,binance.com
+DOMAIN-SUFFIX,binance.cloud
+DOMAIN-SUFFIX,binance.co
+DOMAIN-SUFFIX,binance.charity
+DOMAIN-SUFFIX,binance.org
+DOMAIN-SUFFIX,bnbstatic.com
+DOMAIN-SUFFIX,binance.vision
+DOMAIN-SUFFIX,binance.net
+
+# > OKX (欧易)
+DOMAIN-SUFFIX,okx.com
+DOMAIN-SUFFIX,okex.com
+DOMAIN-SUFFIX,okx.link
+
+# > Coinbase
+DOMAIN-SUFFIX,coinbase.com
+DOMAIN-SUFFIX,cb.id
+
+# > Crypto.com
+DOMAIN-SUFFIX,crypto.com
+
+# > Bybit
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-SUFFIX,bycsi.com
+DOMAIN-SUFFIX,bybit-global.com
+
+# > Bitget
+DOMAIN-SUFFIX,bitget.com
+DOMAIN-SUFFIX,bitget.site
+
+# > Gate.io (芝麻开门)
+DOMAIN-SUFFIX,gate.io
+DOMAIN-SUFFIX,gate.ac
+
+# > KuCoin (库币)
+DOMAIN-SUFFIX,kucoin.com
+DOMAIN-SUFFIX,kucoin.net
+
+# > HTX / Huobi (火币)
+DOMAIN-SUFFIX,htx.com
+DOMAIN-SUFFIX,huobi.com
+
+# > MEXC (抹茶)
+DOMAIN-SUFFIX,mexc.com
+
+# > Kraken
+DOMAIN-SUFFIX,kraken.com
+
+# > 行情与资讯 (CoinGecko / CoinMarketCap / TradingView)
+DOMAIN-SUFFIX,coingecko.com
+DOMAIN-SUFFIX,coinmarketcap.com
+DOMAIN-SUFFIX,tradingview.com

@@ -42,6 +42,7 @@ DOMAIN-SUFFIX,onetrust.com
 DOMAIN,challenges.cloudflare.com
 
 # > Other AI Services
+DOMAIN-SUFFIX,pixpix.com
 DOMAIN-SUFFIX,genspark.ai
 DOMAIN-SUFFIX,diabrowser.engineering
 DOMAIN-SUFFIX,coze.com

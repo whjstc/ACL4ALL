@@ -16,6 +16,8 @@ DOMAIN-SUFFIX,speedcheck.org
 DOMAIN-SUFFIX,speedtest.net
 
 # > IP Address Check
+DOMAIN-SUFFIX,net.coffee
+DOMAIN-SUFFIX,ipcheck.ing
 DOMAIN-SUFFIX,ip.sb
 DOMAIN-SUFFIX,ip-api.com
 DOMAIN-SUFFIX,ipcheck.im

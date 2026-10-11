@@ -15,8 +15,8 @@
 1. **一处维护，各端同步 (GitOps / SSOT)**：
    - 规则与策略组唯一的真理源为 [`subconverter/advanced.ini`](subconverter/advanced.ini)。
    - 通过 GitHub Actions 自动化流水线，自动无损平移编译为 iOS Shadowrocket 专用的 [`ACL4ALL_Advanced.conf`](Shadowrocket/config/ACL4ALL_Advanced.conf) 与标准 JSON/YAML 规则集。
-2. **51 个统一策略组 & 50 层细分分流**：
-   - 包含流媒体、全链路 AI 服务、海外政企、社媒 CDN 优化、私有直连与精准地区路由。
+2. **53 个统一策略组 & 54 层细分分流**：
+   - 包含流媒体、全链路 AI 服务、海外政企、加密货币、境外金融、社媒 CDN 优化、私有直连与精准地区路由。
 3. **端云解耦与隐私零泄露 (Security First)**：
    - **云端公有层**：仅托管通用策略组逻辑与纯净规则集，严禁任何节点公网 IP/端口/密码或私有凭据进入公开仓库。
    - **本地私有层**：设备专有 CA 私钥、局域网私有 DNS、住宅出口凭据及自建 VPS 节点通过本地模块或私有 Sub-Store 管道注入，实现绝对的安全隔离。
@@ -86,13 +86,14 @@ https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/subconverter/advanced.ini
 
 ---
 
-## 🧭 统一策略组矩阵 (全量 51 个)
+## 🧭 统一策略组矩阵 (全量 53 个)
 
 所有客户端（OpenClash / CMFA / Shadowrocket）保持完全统一的命名规范与层级体验：
 
 | 分类 | 策略组名称 |
 | :--- | :--- |
 | **核心与选择** | `🚀 手动选择`、`🇭🇰 香港节点`、`🗿 专属节点`、`🏠 住宅出口`、`🔗 链式中转`、`♻️ 自动选择` |
+| **金融与资产** | `💳 境外金融`、`🪙 加密货币` |
 | **AI 矩阵** | `🤖 AI服务`、`🤖 ChatGPT`、`🤖 Copilot` |
 | **社交与通讯** | `🌐 社交媒体`、`📡 社媒CDN`、`📲 电报消息`、`💬 即时通讯` |
 | **流媒体** | `📹 YouTube`、`🎵 YouTube Music`、`🎥 Netflix`、`🎥 DisneyPlus`、`🎥 HBO`、`🎥 PrimeVideo`、`🎥 AppleTV+`、`🎥 Emby`、`🎻 Spotify`、`📺 Bahamut` |

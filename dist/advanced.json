@@ -261,6 +261,16 @@
       "filter": "[]🏠 住宅出口`[]🚀 手动选择`[]🗿 专属节点`[]🇭🇰 香港节点`[]🇸🇬 新加坡节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🌐 其他地区`[]♻️ 自动选择`[]🎯 全球直连"
     },
     {
+      "name": "💳 境外金融",
+      "type": "select",
+      "filter": "[]🏠 住宅出口`[]🗿 专属节点`[]🚀 手动选择`[]🇺🇸 美国节点`[]🇬🇧 英国节点`[]🇸🇬 新加坡节点`[]🇭🇰 香港节点`[]🇯🇵 日本节点`[]🇼🇸 台湾节点`[]🇩🇪 德国节点`[]🇫🇷 法国节点`[]♻️ 自动选择`[]🎯 全球直连"
+    },
+    {
+      "name": "🪙 加密货币",
+      "type": "select",
+      "filter": "[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇯🇵 日本节点`[]🗿 专属节点`[]🏠 住宅出口`[]🚀 手动选择`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇩🇪 德国节点`[]🌐 其他地区`[]♻️ 自动选择`[]🎯 全球直连"
+    },
+    {
       "name": "🛒 国外电商",
       "type": "select",
       "filter": "[]🏠 住宅出口`[]🚀 手动选择`[]🗿 专属节点`[]🇭🇰 香港节点`[]🇺🇸 美国节点`[]🇯🇵 日本节点`[]🇸🇬 新加坡节点`[]🇼🇸 台湾节点`[]🇰🇷 韩国节点`[]🇨🇦 加拿大节点`[]🇬🇧 英国节点`[]🇫🇷 法国节点`[]🇩🇪 德国节点`[]🇳🇱 荷兰节点`[]🇹🇷 土耳其节点`[]🌐 其他地区`[]♻️ 自动选择`[]🎯 全球直连"
@@ -322,6 +332,20 @@
       "behavior": "classical",
       "url": "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/direct.list,28800",
       "path": "./ruleset/RP_41D59D8E.yaml",
+      "interval": 86400
+    },
+    "RP_1433523C": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/finance.list,28800",
+      "path": "./ruleset/RP_1433523C.yaml",
+      "interval": 86400
+    },
+    "RP_C24238FD": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/crypto.list,28800",
+      "path": "./ruleset/RP_C24238FD.yaml",
       "interval": 86400
     },
     "RP_C5846398": {
@@ -390,9 +414,10 @@
   },
   "rules": [
     "RULE-SET,RP_41D59D8E,🎯 全球直连",
+    "RULE-SET,RP_1433523C,💳 境外金融",
+    "RULE-SET,RP_C24238FD,🪙 加密货币",
     "RULE-SET,RP_C5846398,🌐 社交媒体",
     "RULE-SET,RP_48E0A1C3,📡 社媒CDN",
-    "GEOSITE,cloudflare,📡 社媒CDN",
     "DOMAIN,geolocation.onetrust.com,🚀 手动选择",
     "RULE-SET,RP_3E147260,🤖 AI服务",
     "RULE-SET,RP_123BB9B6,🚀 手动选择",
@@ -430,6 +455,7 @@
     "GEOSITE,bahamut,📺 Bahamut",
     "GEOSITE,category-games,🎮 游戏平台",
     "GEOSITE,category-entertainment,🌎 国外媒体",
+    "GEOSITE,category-cryptocurrency,🪙 加密货币",
     "GEOSITE,category-ecommerce,🛒 国外电商",
     "GEOSITE,gfw,🚀 手动选择",
     "GEOIP,telegram,no-resolve,📲 电报消息",
