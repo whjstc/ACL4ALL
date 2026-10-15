@@ -80,13 +80,17 @@ dns:
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
   - '*.lan'
+  - '*.local'
   - localhost.ptlogin2.qq.com
-  - geosite:cn
+  - '+.msftconnecttest.com'
+  - '+.msftncsi.com'
+  - 'time.*.com'
+  - 'ntp.*.com'
   fake-ip-filter-mode: blacklist
   respect-rules: true
   nameserver:
-  - https://9.9.9.9/dns-query
-  - https://1.1.1.1/dns-query
+  - https://dns.cloudflare.com/dns-query#🚀 手动选择
+  - https://dns.quad9.net/dns-query#🚀 手动选择
   fallback: []
   nameserver-policy:
     geosite:cn,private,google-cn,apple-cn,steam@cn,category-games@cn,microsoft@cn,microsoft,apple:
