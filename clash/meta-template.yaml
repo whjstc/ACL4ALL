@@ -80,12 +80,8 @@ dns:
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
   - '*.lan'
-  - '*.local'
   - localhost.ptlogin2.qq.com
-  - '+.msftconnecttest.com'
-  - '+.msftncsi.com'
-  - 'time.*.com'
-  - 'ntp.*.com'
+  - geosite:cn
   fake-ip-filter-mode: blacklist
   respect-rules: true
   nameserver:
