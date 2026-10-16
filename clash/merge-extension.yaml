@@ -59,8 +59,7 @@ prepend-rules:
   - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
   - DOMAIN-KEYWORD,derp,DIRECT
   - DOMAIN-SUFFIX,derp.tailscale.com,DIRECT
-  - DOMAIN-SUFFIX,tailscale.com,DIRECT
-  - DOMAIN-SUFFIX,tailscale.io,DIRECT
+  - DOMAIN-SUFFIX,ts.net,DIRECT
   - RULE-SET,custom-direct,DIRECT
   # 社交媒体主站与鉴权：强制走统一出口 (住宅代理/社交媒体)
   - RULE-SET,custom-social,🌐 社交媒体

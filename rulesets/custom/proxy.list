@@ -6,7 +6,16 @@
 
 
 # ========================================================
-# 1. 国际商业支付与风控 (统一出口防止支付拦截)
+# 1. Tailscale Web 控制台与主站 (走代理保证秒开与 Google/Microsoft OAuth 登录顺畅)
+# ========================================================
+DOMAIN,tailscale.com
+DOMAIN-SUFFIX,login.tailscale.com
+DOMAIN-SUFFIX,tailscale.dev
+DOMAIN-SUFFIX,tailscale.com
+DOMAIN-SUFFIX,tailscale.io
+
+# ========================================================
+# 2. 国际商业支付与风控 (统一出口防止支付拦截)
 # ========================================================
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,stripecdn.com
@@ -15,20 +24,20 @@ DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,paypalobjects.com
 
 # ========================================================
-# 2. YouTube Music
+# 3. YouTube Music
 # ========================================================
 DOMAIN-SUFFIX,music.youtube.com
 DOMAIN-SUFFIX,youtubemusic.com
 
 # ========================================================
-# 3. IP 归属与合规探测
+# 4. IP 归属与合规探测
 # ========================================================
 DOMAIN-SUFFIX,ipinfo.io
 DOMAIN,geolocation.onetrust.com
 DOMAIN-SUFFIX,cookielaw.org
 
 # ========================================================
-# 4. 常用公共服务与开发镜像
+# 5. 常用公共服务与开发镜像
 # ========================================================
 DOMAIN-SUFFIX,cdn.jsdelivr.net
 DOMAIN-SUFFIX,unpkg.com

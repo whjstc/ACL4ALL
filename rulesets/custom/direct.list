@@ -17,8 +17,7 @@ SRC-PORT,41641-41650
 IP-CIDR,100.64.0.0/10,no-resolve
 DOMAIN-KEYWORD,derp
 DOMAIN-SUFFIX,derp.tailscale.com
-DOMAIN-SUFFIX,tailscale.com
-DOMAIN-SUFFIX,tailscale.io
+DOMAIN-SUFFIX,ts.net
 
 # ========================================================
 # 2. 公司私有服务与内部网关
