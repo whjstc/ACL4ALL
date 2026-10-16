@@ -1025,6 +1025,11 @@ proxy-groups:
   proxies:
   - 🐟 漏网之鱼
 rules:
+- PROCESS-NAME,Tailscale,🎯 全球直连
+- PROCESS-NAME,tailscaled,🎯 全球直连
+- PROCESS-NAME,IPNExtension,🎯 全球直连
+- DST-PORT,41641,🎯 全球直连
+- IP-CIDR,100.64.0.0/10,🎯 全球直连,no-resolve
 - GEOSITE,private,🎯 全球直连
 - GEOIP,private,🎯 全球直连,no-resolve
 - RULE-SET,Custom_Direct,🎯 全球直连
