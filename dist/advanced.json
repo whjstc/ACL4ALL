@@ -413,6 +413,16 @@
     }
   },
   "rules": [
+    "PROCESS-NAME,Tailscale,🎯 全球直连",
+    "PROCESS-NAME,tailscaled,🎯 全球直连",
+    "PROCESS-NAME,IPNExtension,🎯 全球直连",
+    "DST-PORT,3478,🎯 全球直连",
+    "DST-PORT,41641,🎯 全球直连",
+    "IP-CIDR,100.64.0.0/10,no-resolve,🎯 全球直连",
+    "DOMAIN-KEYWORD,derp,🎯 全球直连",
+    "DOMAIN-SUFFIX,derp.tailscale.com,🎯 全球直连",
+    "DOMAIN-SUFFIX,tailscale.com,🎯 全球直连",
+    "DOMAIN-SUFFIX,tailscale.io,🎯 全球直连",
     "RULE-SET,RP_41D59D8E,🎯 全球直连",
     "RULE-SET,RP_1433523C,💳 境外金融",
     "RULE-SET,RP_C24238FD,🪙 加密货币",

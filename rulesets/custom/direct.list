@@ -5,14 +5,20 @@
 # DESC: 基础直连与打洞规则，涵盖 Tailscale P2P、公司内网、Apple 定位地图、邮件、银行及自建节点
 
 # ========================================================
-# 1. Tailscale P2P 打洞与虚拟网段 (最高优先级放行，保证 NAT1 直连)
+# 1. Tailscale P2P 打洞、STUN 探测与虚拟网段 (最高优先级放行，保证 NAT1 直连)
 # ========================================================
 PROCESS-NAME,tailscaled
 PROCESS-NAME,Tailscale
 PROCESS-NAME,IPNExtension
+DST-PORT,3478
+DST-PORT,41641
 DST-PORT,41641-41650
 SRC-PORT,41641-41650
 IP-CIDR,100.64.0.0/10,no-resolve
+DOMAIN-KEYWORD,derp
+DOMAIN-SUFFIX,derp.tailscale.com
+DOMAIN-SUFFIX,tailscale.com
+DOMAIN-SUFFIX,tailscale.io
 
 # ========================================================
 # 2. 公司私有服务与内部网关
