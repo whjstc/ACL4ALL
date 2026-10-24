@@ -94,6 +94,7 @@ dns:
   - '*.lan'
   - localhost.ptlogin2.qq.com
   - geosite:cn
+  - '+.icesoft.net'
   fake-ip-filter-mode: blacklist
   respect-rules: true
   nameserver:
@@ -101,6 +102,9 @@ dns:
   - https://dns.quad9.net/dns-query#🚀 手动选择
   fallback: []
   nameserver-policy:
+    '+.icesoft.net':
+    - 223.5.5.5
+    - https://doh.pub/dns-query
     geosite:cn,private,google-cn,apple-cn,steam@cn,category-games@cn,microsoft@cn,microsoft,apple:
     - https://223.5.5.5/dns-query
     - https://doh.pub/dns-query

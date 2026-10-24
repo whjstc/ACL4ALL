@@ -10,8 +10,27 @@ dns:
     "+.tailscale.com":
       - 223.5.5.5
       - 119.29.29.29
+    "+.icesoft.net":
+      - 223.5.5.5
+      - 119.29.29.29
 
-# 2. 外部规则集声明 (从 ACL4ALL 自动拉取更新)
+# 2. TUN 模式安全配置 (排除 Tailscale CGNAT 与内网网段，防止打洞 UDP 包被截胡)
+tun:
+  enable: true
+  stack: mixed
+  auto-detect-interface: true
+  auto-route: true
+  strict-route: false
+  endpoint-independent-nat: true
+  route-exclude-address:
+    - 10.0.0.0/8
+    - 100.64.0.0/10
+    - 172.16.0.0/12
+    - 192.168.0.0/16
+    - 224.0.0.0/4
+    - 255.255.255.255/32
+
+# 3. 外部规则集声明 (从 ACL4ALL 自动拉取更新)
 rule-providers:
   custom-direct:
     type: http
@@ -55,7 +74,8 @@ prepend-rules:
   - PROCESS-NAME,tailscaled,DIRECT
   - PROCESS-NAME,IPNExtension,DIRECT
   - DST-PORT,3478,DIRECT
-  - DST-PORT,41641,DIRECT
+  - DST-PORT,41641-41650,DIRECT
+  - SRC-PORT,41641-41650,DIRECT
   - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
   - DOMAIN-KEYWORD,derp,DIRECT
   - DOMAIN-SUFFIX,derp.tailscale.com,DIRECT

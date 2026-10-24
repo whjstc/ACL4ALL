@@ -32,6 +32,7 @@ DOMAIN-SUFFIX,chessease.net
 IP-CIDR,107.149.202.3/32,no-resolve
 IP-CIDR,107.148.84.137/32,no-resolve
 IP-CIDR,104.219.211.10/32,no-resolve
+IP-CIDR,170.106.114.185/32,no-resolve
 DOMAIN-SUFFIX,icesoft.net
 DOMAIN-SUFFIX,mtfushi.org
 DOMAIN-SUFFIX,ctemanufushi.org
