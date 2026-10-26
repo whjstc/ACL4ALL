@@ -90,6 +90,7 @@ secrets.*
 
 # === 本地真实节点配置文件（严禁上传） ===
 clash/链式精神.yaml
+clash/chain.yaml
 clash/openclash.yaml
 clash/clashverge.yaml
 clashverge.yaml*
