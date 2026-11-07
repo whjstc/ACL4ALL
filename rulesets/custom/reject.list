@@ -42,6 +42,14 @@ DOMAIN-SUFFIX,adjust.com
 DOMAIN-SUFFIX,appsflyer.com
 DOMAIN-SUFFIX,branch.io
 
+# Bilibili PCDN 拦截 (强制回退官方骨干 CDN)
+DOMAIN-WILDCARD,*pcdn*.biliapi.net
+DOMAIN-KEYWORD,pcdn.biliapi.net
+DOMAIN-SUFFIX,mcdn.bilivideo.cn
+DOMAIN-SUFFIX,mcdn.bilivideo.com
+DOMAIN-SUFFIX,szbdyd.com
+DOMAIN-SUFFIX,mountaintoys.cn
+
 # 自定义拦截域名（在下方添加你的规则）
 # DOMAIN-SUFFIX,example-ad.com
 # DOMAIN-KEYWORD,ad-keyword

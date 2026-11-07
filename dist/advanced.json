@@ -324,9 +324,21 @@
       "name": "🎯 全球直连",
       "type": "select",
       "filter": "[]DIRECT`[]🚀 手动选择"
+    },
+    {
+      "name": "🛑 广告拦截",
+      "type": "select",
+      "filter": "[]REJECT`[]DIRECT"
     }
   ],
   "ruleProviders": {
+    "RP_C020161A": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/reject.list,28800",
+      "path": "./ruleset/RP_C020161A.yaml",
+      "interval": 86400
+    },
     "RP_41D59D8E": {
       "type": "http",
       "behavior": "classical",
@@ -422,6 +434,7 @@
     "DOMAIN-KEYWORD,derp,🎯 全球直连",
     "DOMAIN-SUFFIX,derp.tailscale.com,🎯 全球直连",
     "DOMAIN-SUFFIX,ts.net,🎯 全球直连",
+    "RULE-SET,RP_C020161A,🛑 广告拦截",
     "RULE-SET,RP_41D59D8E,🎯 全球直连",
     "RULE-SET,RP_1433523C,💳 境外金融",
     "RULE-SET,RP_C24238FD,🪙 加密货币",

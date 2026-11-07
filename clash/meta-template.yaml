@@ -1029,6 +1029,12 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   proxies:
   - DIRECT
+- name: 🛑 广告拦截
+  type: select
+  url: https://www.gstatic.com/generate_204
+  proxies:
+  - REJECT
+  - DIRECT
 - name: 🐟 遵循规则
   type: select
   url: https://www.gstatic.com/generate_204
@@ -1046,6 +1052,7 @@ rules:
 - DOMAIN-KEYWORD,derp,🎯 全球直连
 - DOMAIN-SUFFIX,derp.tailscale.com,🎯 全球直连
 - DOMAIN-SUFFIX,ts.net,🎯 全球直连
+- RULE-SET,Custom_Reject,🛑 广告拦截
 - GEOSITE,private,🎯 全球直连
 - GEOIP,private,🎯 全球直连,no-resolve
 - RULE-SET,Custom_Direct,🎯 全球直连
@@ -1177,4 +1184,11 @@ rule-providers:
     path: ./rule_provider/CustomSocial.yaml
     type: http
     url: https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/CustomSocial.yaml
+    proxy: DIRECT
+  Custom_Reject:
+    behavior: classical
+    interval: 28800
+    path: ./rule_provider/reject.yaml
+    type: http
+    url: https://cdn.jsdelivr.net/gh/whjstc/ACL4ALL@main/rulesets/custom/reject.yaml
     proxy: DIRECT
